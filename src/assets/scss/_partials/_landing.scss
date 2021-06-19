@@ -1,0 +1,108 @@
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  background: linear-gradient(0deg, hsla(0, 0%, 0%, 0.8), hsla(0, 0%, 0%, 0.8)),
+    url("https://cdn.pixabay.com/photo/2015/03/26/09/41/tie-690084_1280.jpg") no-repeat;
+  background-size: cover;
+  animation: background-opacity ease-in 1.5s forwards;
+  @keyframes background-opacity {
+    0% {
+      display: none;
+      opacity: 0;
+    }
+
+    1% {
+      display: flex;
+      opacity: 0;
+    }
+
+    100% {
+      display: flex;
+      opacity: 1;
+    }
+  }
+}
+
+.landing-header {
+  margin-top: -5em;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  h1 {
+    font-size: 6em;
+    margin-bottom: -0.2em;
+    animation: header-move-up ease-in 1s forwards;
+  }
+  @keyframes header-move-up {
+    0% {
+      transform: translateY(20%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  h3 {
+    color: hsl(38, 66%, 61%);
+    margin-top: 1.5em;
+    font-weight: 300;
+    font-size: 1em;
+    letter-spacing: 0.5em;
+  }
+  @media (max-width: 375px) {
+    margin: 2em;
+    h1 {
+      font-size: 3em;
+    }
+  }
+}
+
+.landing-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 2em;
+
+  h1 {
+    color: hsl(0, 0%, 71%);
+  }
+
+  button {
+    margin: 1em;
+    width: 151px;
+    height: 60px;
+    border-radius: 0;
+    font-weight: 100;
+    background: hsl(0, 0, 13%);
+    border: none;
+  }
+}
+
+.landing-navigation {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+  font-size: 1em;
+  p {
+    color: white;
+    font-weight: 100;
+    cursor: pointer;
+    margin: 0 2em;
+  }
+  .link:hover {
+    color: gray;
+  }
+  span {
+    color: gray;
+  }
+}
