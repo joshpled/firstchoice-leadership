@@ -1,0 +1,19 @@
+.personal-header {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.personal-buttons {
+  display: flex;
+  justify-content: center;
+  .card {
+    background-color: hsl(0, 0%, 19%);
+    color: hsl(0, 0%, 80%);
+    border-radius: 1em;
+    .btn {
+      background: hsl(38, 66%, 61%);
+      border: none;
+    }
+  }
+}

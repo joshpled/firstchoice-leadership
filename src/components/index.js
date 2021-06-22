@@ -1,3 +1,4 @@
 import Navigation from "./Navigation";
+import InfoCard from "./InfoCard";
 
-export { Navigation };
+export { Navigation, InfoCard };
