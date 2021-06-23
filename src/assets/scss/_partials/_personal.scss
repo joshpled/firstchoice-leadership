@@ -1,19 +1,46 @@
+@import "./colors";
+
 .personal-header {
   display: flex;
   justify-content: center;
   color: white;
+  h1 {
+    margin-top: -100px;
+  }
 }
 
 .personal-buttons {
   display: flex;
   justify-content: center;
+
   .card {
-    background-color: hsl(0, 0%, 19%);
+    background-color: $card-background;
     color: hsl(0, 0%, 80%);
-    border-radius: 1em;
+    border-radius: 0.5em;
+
     .btn {
-      background: hsl(38, 66%, 61%);
+      background: $accent-color;
       border: none;
+    }
+  }
+}
+
+.personal-cards {
+  display: flex;
+  margin: 0 3em;
+  @media only screen and (max-width: 700px) {
+    flex-direction: column;
+  }
+  .card {
+    margin: 15px;
+    max-height: fit-content;
+    .card-title {
+      text-align: center;
+      font-size: 2em;
+    }
+    .card-text {
+      font-size: 1.2em;
+      word-spacing: 0.3em;
     }
   }
 }

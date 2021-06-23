@@ -1,4 +1,5 @@
 import Navigation from "./Navigation";
 import InfoCard from "./InfoCard";
+import Footer from "./Footer";
 
-export { Navigation, InfoCard };
+export { Navigation, InfoCard, Footer };

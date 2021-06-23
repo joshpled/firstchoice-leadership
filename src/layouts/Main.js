@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import { Navigation } from "components";
+import { Navigation, Footer } from "components";
 import { Landing, Professional, Personal } from "pages";
 
 function Main() {
@@ -14,6 +14,7 @@ function Main() {
           <Route path="/professional" exact component={Professional} render={(props) => <Professional {...props} />} />
         </Switch>
       </div>
+      <Footer />
     </div>
   );
 }

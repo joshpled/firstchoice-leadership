@@ -1,3 +1,5 @@
+@import "./colors";
+
 .landing-container {
   display: flex;
   flex-direction: column;
@@ -48,7 +50,7 @@
     }
   }
   h3 {
-    color: hsl(38, 66%, 61%);
+    color: $accent-color;
     margin-top: 1.5em;
     font-weight: 300;
     font-size: 1em;
@@ -93,6 +95,11 @@
   text-align: center;
   padding: 1em;
   font-size: 1em;
+
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
+
   p {
     color: white;
     font-weight: 100;
@@ -104,5 +111,20 @@
   }
   span {
     color: gray;
+  }
+}
+
+.landing-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1em;
+  font-size: 1em;
+  color: $contrast-gray;
+  .footer-left {
+    float: left;
+  }
+  .footer-right {
+    float: right;
   }
 }
