@@ -7,8 +7,8 @@ function InfoCard({ data }) {
   return (
     <Card>
       <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted text-center">{subtitle}</Card.Subtitle>
+        <Card.Title className="text-uppercase">{title}</Card.Title>
+        <Card.Subtitle className="mb-2 text-muted text-center text-uppercase">{subtitle}</Card.Subtitle>
         <Card.Text>{text}</Card.Text>
         {link && (
           <Link to={`${link}`}>

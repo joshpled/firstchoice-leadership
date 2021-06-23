@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { Navigation, Footer } from "components";
-import { Landing, Professional, Personal } from "pages";
+import { Landing, Professional, Personal, Contact } from "pages";
 
 function Main() {
   return (
@@ -9,9 +9,10 @@ function Main() {
       <Navigation />
       <div>
         <Switch>
-          <Route path="/" exact component={Landing} render={(props) => <Landing {...props} />} />
-          <Route path="/personal" exact component={Personal} render={(props) => <Personal {...props} />} />
-          <Route path="/professional" exact component={Professional} render={(props) => <Professional {...props} />} />
+          <Route path="/" exact component={Landing} />
+          <Route path="/personal" exact component={Personal} />
+          <Route path="/professional" exact component={Professional} />
+          <Route path="/contact-me" exact component={Contact} />
         </Switch>
       </div>
       <Footer />

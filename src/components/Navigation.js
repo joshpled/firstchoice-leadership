@@ -15,6 +15,10 @@ function Navigation() {
       <Link to="/professional">
         <p className="link">PROFESSIONAL</p>
       </Link>
+      <span className="separator">|</span>
+      <Link to="/contact-me">
+        <p className="link">CONTACT ME</p>
+      </Link>
     </div>
   );
 }
