@@ -1,0 +1,22 @@
+.professional-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.professional-main {
+  background: linear-gradient(hsla(0, 0%, 0%, 0.686), hsla(235, 62%, 73%, 0));
+  width: 80vw;
+  height: 50vh;
+  border-radius: 10px;
+  color: white;
+  font-weight: 200;
+  padding: 20px;
+}
+
+.professional-header {
+  h1 {
+    color: white;
+  }
+}

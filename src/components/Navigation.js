@@ -19,6 +19,10 @@ function Navigation() {
       <Link to="/contact-me">
         <p className="link">CONTACT ME</p>
       </Link>
+      <span className="separator">|</span>
+      <Link to="/about">
+        <p className="link">ABOUT</p>
+      </Link>
     </div>
   );
 }
