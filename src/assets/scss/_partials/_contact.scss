@@ -1,1 +1,32 @@
-j
+.contact-form-container {
+  color: white;
+  font-weight: 200;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  width: 400px;
+  text-align: left;
+}
+
+.contact-wrapper {
+  .contact-header {
+    text-align: center;
+    font-weight: 200;
+    color: white;
+    margin-bottom: 30px;
+  }
+}
+
+.contact-content-wrapper {
+  display: flex;
+  justify-content: center;
+  .contact-info {
+    margin-right: 20px;
+  }
+}
+
+.contact-emailphone {
+  margin-bottom: 20px;
+}
