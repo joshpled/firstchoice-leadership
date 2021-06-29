@@ -28,6 +28,17 @@
       opacity: 1;
     }
   }
+  #collapse-navbar {
+    display: none;
+  }
+  @media only screen and (max-width: 770px) {
+    #main-navbar {
+      display: none;
+    }
+    #collapse-navbar {
+      display: contents;
+    }
+  }
 }
 
 .landing-header {
@@ -98,10 +109,6 @@
   text-align: center;
   padding: 1em;
   font-size: 1em;
-
-  @media only screen and (max-width: 700px) {
-    display: none;
-  }
 
   a:hover {
     text-decoration: none;

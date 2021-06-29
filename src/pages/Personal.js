@@ -5,7 +5,7 @@ function Personal() {
   return (
     <div>
       <header className="personal-header">
-        <h1>COACHING</h1>
+        <h1 className="display-1">COACHING</h1>
       </header>
       <div className="personal-buttons">
         <div className="personal-cards">

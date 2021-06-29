@@ -1,12 +1,17 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import { Navigation, Footer } from "components";
+import { Navigation, Footer, IconNavigation } from "components";
 import { Landing, Professional, Personal, Contact, About } from "pages";
 
 function Main() {
   return (
     <div className="landing-container">
-      <Navigation />
+      <div id="main-navbar">
+        <Navigation />
+      </div>
+      <div id="collapse-navbar">
+        <IconNavigation />
+      </div>
       <div>
         <Switch>
           <Route path="/" exact component={Landing} />

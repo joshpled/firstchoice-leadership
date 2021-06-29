@@ -18,8 +18,9 @@ function ContactInfo() {
         </div>
       </div>
       <div>
-        Currently serving Alabama, Florida, and Atlanta. <br />
-        I'm also available remote for any client anywhere. <br />I speak English and Spanish fluently.
+        Based out of Fort Benning.
+        <br />
+        Available anywhere and remote. <br />I speak English and Spanish fluently.
       </div>
     </div>
   );
