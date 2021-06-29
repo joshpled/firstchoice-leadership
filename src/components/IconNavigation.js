@@ -40,10 +40,10 @@ export default IconNavigation;
 
 const styles = {
   margins: {
-    margin: "20px",
+    margin: "0 20px 20px 20px",
     color: "gray",
   },
   seperator: {
-    alignSelf: "center",
+    marginBottom: "20px",
   },
 };

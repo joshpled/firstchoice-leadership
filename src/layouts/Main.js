@@ -6,12 +6,15 @@ import { Landing, Professional, Personal, Contact, About } from "pages";
 function Main() {
   return (
     <div className="landing-container">
-      <div id="main-navbar">
-        <Navigation />
+      <div className="navigation-container">
+        <div id="main-navbar">
+          <Navigation />
+        </div>
+        <div id="collapse-navbar">
+          <IconNavigation />
+        </div>
       </div>
-      <div id="collapse-navbar">
-        <IconNavigation />
-      </div>
+
       <div>
         <Switch>
           <Route path="/" exact component={Landing} />
