@@ -24,6 +24,13 @@ function Landing() {
             </Button>
           </Link>
         </div>
+        <div className="landing-client-login-wrapper">
+          <Link to="/client-login">
+            <Button variant="secondary" value="professional">
+              Client Login
+            </Button>
+          </Link>
+        </div>
       </div>
     </div>
   );
