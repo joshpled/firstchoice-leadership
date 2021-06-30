@@ -52,6 +52,9 @@
     font-size: 6em;
     margin-bottom: -0.2em;
     animation: header-move-up ease-in 1s forwards;
+    @media only screen and (max-width: 770px) {
+      font-size: 3em;
+    }
   }
   @keyframes header-move-up {
     0% {
@@ -70,12 +73,6 @@
     font-size: 1em;
     letter-spacing: 0.5em;
   }
-  @media (max-width: 375px) {
-    margin: 2em;
-    h1 {
-      font-size: 3em;
-    }
-  }
 }
 
 .landing-buttons {
@@ -87,6 +84,9 @@
 
   h1 {
     color: hsl(0, 0%, 71%);
+    @media only screen and (max-width: 770px) {
+      font-size: 1.5em;
+    }
   }
 
   button {
@@ -141,6 +141,9 @@
   }
   .footer-right {
     float: right;
+  }
+  @media only screen and (max-width: 700px) {
+    display: none;
   }
 }
 
