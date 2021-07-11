@@ -1,0 +1,51 @@
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 80px;
+  color: rgb(167, 167, 167);
+  font-weight: 300;
+  .about-header {
+    text-align: center;
+  }
+  .about-intro {
+    margin: 20px;
+    text-align: center;
+  }
+  .about-body {
+    display: flex;
+    flex-direction: row;
+    div {
+      margin: 10px;
+    }
+    .about-body-two {
+      text-align: center;
+    }
+    .about-body-three {
+      text-align: end;
+    }
+  }
+  .about-footer {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    place-content: center center;
+    svg {
+      margin-right: 10px;
+    }
+    div {
+      margin: 10px;
+    }
+    a {
+      text-decoration: none;
+      color: rgb(213, 213, 213);
+    }
+  }
+  .about-maxwell {
+    text-align: center;
+    font-size: larger;
+    a {
+      text-decoration: none;
+      color: rgb(213, 213, 213);
+    }
+  }
+}
