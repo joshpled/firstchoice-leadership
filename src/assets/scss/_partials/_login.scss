@@ -3,16 +3,19 @@
   flex-direction: column;
   align-content: center;
   align-items: center;
+  color: #ededed;
 
   .card {
     background: #0000007c;
     color: rgba(255, 255, 255, 0.7);
     border-radius: 0.5em;
+
     .btn {
       background: #7aa5a8;
       border: black;
     }
   }
+
   a {
     color: #ededed;
   }

@@ -4,5 +4,6 @@ import Footer from "./Footer";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
 import IconNavigation from "./IconNavigation";
+import ClientMessages from "./ClientComponents/ClientMessages";
 
-export { Navigation, InfoCard, Footer, ContactForm, ContactInfo, IconNavigation };
+export { ClientMessages, Navigation, InfoCard, Footer, ContactForm, ContactInfo, IconNavigation };

@@ -1,0 +1,33 @@
+.client-wrapper {
+  display: flex;
+  flex-direction: row;
+  place-content: center center;
+  color: hsl(0, 0%, 69%);
+  hr {
+    border: 1px solid rgb(152, 152, 152);
+  }
+  div {
+    margin: 20px;
+    padding: 20px;
+  }
+  .client-menu,
+  .client-dashboard {
+    background: hsla(0, 0%, 0%, 0.461);
+    border-radius: 0.25em;
+  }
+  .btn-primary {
+    background-color: hsla(0, 0%, 19%, 0.461);
+    border: none;
+  }
+  .btn-primary:hover {
+    background-color: hsla(0, 0%, 37%, 0.783);
+    border: black 1px;
+  }
+  .btn-primary:focus {
+    background-color: hsla(0, 0%, 37%, 0.783);
+    border: black 1px;
+  }
+  .btn-primary:active {
+    border: black solid 1px;
+  }
+}
