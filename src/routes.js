@@ -1,0 +1,77 @@
+import { Landing, Login, Signup, UpdateProfile, ForgotPassword, Professional, Personal, Contact, About } from "pages";
+var routes = [
+  {
+    path: "/landing",
+    layout: "/home",
+    name: "Landing",
+    icon: "home",
+    show: true,
+    component: Landing,
+  },
+  {
+    path: "/professional",
+    layout: "/home",
+    name: "Professional",
+    icon: "home",
+    show: true,
+    component: Professional,
+  },
+  {
+    path: "/personal",
+    layout: "/home",
+    name: "Personal",
+    icon: "home",
+    show: true,
+    component: Personal,
+  },
+  {
+    path: "/contact",
+    layout: "/home",
+    name: "Contact",
+    icon: "home",
+    show: true,
+    component: Contact,
+  },
+  {
+    path: "/about",
+    layout: "/home",
+    name: "About",
+    icon: "home",
+    show: true,
+    component: About,
+  },
+  {
+    path: "/login",
+    layout: "/client",
+    name: "Login",
+    icon: "home",
+    show: true,
+    component: Login,
+  },
+  {
+    path: "/signup",
+    layout: "/client",
+    name: "Sign Up",
+    icon: "home",
+    show: true,
+    component: Signup,
+  },
+  {
+    path: "/update-profile",
+    layout: "/client",
+    name: "Update Profile",
+    icon: "home",
+    show: true,
+    component: UpdateProfile,
+  },
+  {
+    path: "/forgot-password",
+    layout: "/client",
+    name: "Forgot Password",
+    icon: "home",
+    show: true,
+    component: ForgotPassword,
+  },
+];
+
+export default routes;

@@ -5,31 +5,31 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function IconNavigation() {
   return (
     <div className="landing-navigation">
-      <Link to="/">
+      <Link to="/home/landing">
         <FontAwesomeIcon icon="home" size="2x" style={styles.margins} />
       </Link>
       <span className="separator" style={styles.seperator}>
         |
       </span>
-      <Link to="/personal">
+      <Link to="/home/personal">
         <FontAwesomeIcon icon="people-arrows" size="2x" style={styles.margins} />
       </Link>
       <span className="separator" style={styles.seperator}>
         |
       </span>
-      <Link to="/professional">
+      <Link to="/home/professional">
         <FontAwesomeIcon icon="user-tie" size="2x" style={styles.margins} />
       </Link>
       <span className="separator" style={styles.seperator}>
         |
       </span>
-      <Link to="/contact-me">
+      <Link to="/home/contact">
         <FontAwesomeIcon icon="envelope-open" size="2x" style={styles.margins} />
       </Link>
       <span className="separator" style={styles.seperator}>
         |
       </span>
-      <Link to="/about">
+      <Link to="/home/about">
         <FontAwesomeIcon icon="id-card" size="2x" style={styles.margins} />
       </Link>
     </div>

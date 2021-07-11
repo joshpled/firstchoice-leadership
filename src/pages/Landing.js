@@ -13,19 +13,19 @@ function Landing() {
       <div className="landing-buttons">
         <h1>Where would you like to start your journey?</h1>
         <div>
-          <Link to="/personal">
+          <Link to="/home/personal">
             <Button variant="secondary" value="personal">
               Personal
             </Button>
           </Link>
-          <Link to="/professional">
+          <Link to="/home/professional">
             <Button variant="secondary" value="professional">
               Professional
             </Button>
           </Link>
         </div>
         <div className="landing-client-login-wrapper">
-          <Link to="/client-login">
+          <Link to="/client/login">
             <Button variant="secondary" value="professional">
               Client Login
             </Button>

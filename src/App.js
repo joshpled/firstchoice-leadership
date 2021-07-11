@@ -1,14 +1,18 @@
+import Client from "layouts/Client.js";
+import Main from "layouts/Main.js";
 import React from "react";
-import Main from "./layouts/Main";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faEnvelopeOpen, faHome, faIdCard, faPeopleArrows, faPhoneAlt, faUser, faUserTie } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin, faTwitter, faFacebook } from "@fortawesome/free-brands-svg-icons";
-library.add(faPhoneAlt, faEnvelopeOpen, faUser, faUserTie, faPeopleArrows, faHome, faIdCard, faLinkedin, faTwitter, faFacebook);
+import { Redirect, Route } from "react-router-dom";
+import "./context/icons";
 
 function App() {
+  // useEffect(() => {
+  //   sessionStorage.getItem("path");
+  // }, []);
   return (
     <>
-      <Main />
+      <Route path="/home" render={(props) => <Main {...props} />} />
+      <Route path="/client" render={(props) => <Client {...props} />} />
+      <Redirect from="/" to="/home/landing" />;
     </>
   );
 }

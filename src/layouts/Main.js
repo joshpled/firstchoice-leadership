@@ -1,9 +1,23 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Route, Switch, useLocation } from "react-router-dom";
 import { Navigation, Footer, IconNavigation } from "components";
-import { Landing, Professional, Personal, Contact, About } from "pages";
+import generateKey from "context/generateKey";
+import routes from "routes";
 
 function Main() {
+  const location = useLocation();
+  const getRoutes = (routes) => {
+    return routes.map((prop) => {
+      if (prop.layout === "/home") {
+        return <Route path={prop.layout + prop.path} key={generateKey(prop.component)} render={(props) => <prop.component {...props} />} />;
+      } else {
+        return null;
+      }
+    });
+  };
+  useEffect(() => {
+    sessionStorage.setItem("path", location.pathname);
+  });
   return (
     <div className="landing-container">
       <div className="navigation-container">
@@ -16,13 +30,7 @@ function Main() {
       </div>
 
       <div>
-        <Switch>
-          <Route path="/" exact component={Landing} />
-          <Route path="/personal" exact component={Personal} />
-          <Route path="/professional" exact component={Professional} />
-          <Route path="/contact-me" exact component={Contact} />
-          <Route path="/about" exact component={About} />
-        </Switch>
+        <Switch>{getRoutes(routes)}</Switch>
       </div>
       <Footer />
     </div>
