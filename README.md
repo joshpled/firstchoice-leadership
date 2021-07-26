@@ -22,10 +22,10 @@
   "If you ready, and only you know if you are, contact me NOW!
 Moreover, as a John Maxwell Certified Coach, Teacher, Trainer, and Speaker, I can offer you workshops, seminars, keynote speaking, and coaching, aiding your personal and professional growth through study and practical application of John’s proven leadership methods. Working together, I will move you and/or your team or organization in the desired direction to reach your goals."
     <br />
-    <a href="https://github.com/joshpled/firstchoice-leadership"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/joshpled/firstchoice-leadership"><strong>Explore the docs » (Coming Soon)****</strong></a>
     <br />
     <br />
-    <a href="https://github.com/joshpled/firstchoice-leadership">View Demo</a>
+    <a href="https://firstchoiceleadership.netlify.app/home/landing">View Demo</a>
     ·
     <a href="https://github.com/joshpled/firstchoice-leadership/issues">Report Bug</a>
     ·
@@ -52,12 +52,10 @@ Moreover, as a John Maxwell Certified Coach, Teacher, Trainer, and Speaker, I ca
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -65,19 +63,15 @@ Moreover, as a John Maxwell Certified Coach, Teacher, Trainer, and Speaker, I ca
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`joshpled`, `firstchoice-leadership`, `twitter_handle`, `email`, `project_title`, `project_description`
-
+<center>
+<img src="https://i.imgur.com/nSprcnN.jpeg" alt="Logo" width="400"  style="border: white 2px solid">
+</center>
 
 ### Built With
 
-* []()
-* []()
-* []()
+* React
+* Firebase for Authentication
+* No Backend (most likely Firestore)
 
 
 
@@ -88,7 +82,6 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
   npm install npm@latest -g
@@ -104,24 +97,17 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npm install
    ```
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
+3. Run on local server
+   ```sh
+   npm start
+   ```   
 
 <!-- ROADMAP -->
 ## Roadmap
 
 See the [open issues](https://github.com/joshpled/firstchoice-leadership/issues) for a list of proposed features (and known issues).
 
-
+* Backend
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -146,20 +132,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
+Joshua Perez Leduc - joshuapleduc@gmail.com
 
 Project Link: [https://github.com/joshpled/firstchoice-leadership](https://github.com/joshpled/firstchoice-leadership)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-* []()
-* []()
-* []()
-
-
 
 
 
