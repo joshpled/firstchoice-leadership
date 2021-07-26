@@ -12,13 +12,15 @@
 <br />
 <p align="center">
   <a href="https://github.com/joshpled/firstchoice-leadership">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://i.imgur.com/DXGuPdk.png" alt="Logo" width="400" height="400">
   </a>
 
-  <h3 align="center">project_title</h3>
+  <h3 align="center">First Choice Leadership | with Jesus M. Perez</h3>
 
   <p align="center">
-    project_description
+  Leadership Coach and Conference Speaker
+  "If you ready, and only you know if you are, contact me NOW!
+Moreover, as a John Maxwell Certified Coach, Teacher, Trainer, and Speaker, I can offer you workshops, seminars, keynote speaking, and coaching, aiding your personal and professional growth through study and practical application of John’s proven leadership methods. Working together, I will move you and/or your team or organization in the desired direction to reach your goals."
     <br />
     <a href="https://github.com/joshpled/firstchoice-leadership"><strong>Explore the docs »</strong></a>
     <br />
