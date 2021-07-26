@@ -172,7 +172,7 @@ Project Link: [https://github.com/joshpled/firstchoice-leadership](https://githu
 [issues-shield]: https://img.shields.io/github/issues/joshpled/firstchoice-leadership.svg?style=for-the-badge
 [issues-url]: https://github.com/joshpled/firstchoice-leadership/issues
 [license-shield]: https://img.shields.io/github/license/joshpled/firstchoice-leadership.svg?style=for-the-badge
-[license-url]: https://github.com/joshpled/firstchoice-leadership/blob/master/LICENSE.txt
+[license-url]: https://github.com/joshpled/firstchoice-leadership/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/joshuaperezleduc/
 [netlify-shield]: https://img.shields.io/netlify/889d9191-9038-4f9f-ab66-7be753c228fb?style=for-the-badge
