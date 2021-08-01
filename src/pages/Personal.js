@@ -14,7 +14,7 @@ function Personal() {
               data={{
                 title: "Individual",
                 subtitle: "one on one private and confidential coaching",
-                text: "When I am working with you one-on-one, it is my highest objective to help you reach your purpose, vision and goals by working through John Maxwell's programs specific to your needs. Together, we will create a strategic, powerful plan for you to gain clarity through a weekly process including, interaction and accountability.",
+                text: "When I am working with you one-on-one, it is my highest objective to help you reach your purpose, vision and goals by working through life forming coaching program specific to your needs. Together, we will create a strategic, powerful plan for you to gain clarity through a weekly process including, interaction and accountability.",
                 link: "/contact-me",
                 button: "Inquire",
               }}

@@ -8,7 +8,7 @@
   background: linear-gradient(0deg, hsla(0, 0%, 0%, 0.8), hsla(0, 0%, 0%, 0.8)),
     url("https://cdn.pixabay.com/photo/2015/03/26/09/41/tie-690084_1280.jpg") no-repeat;
   background-size: cover;
-  animation: background-opacity ease-in 1.5s forwards;
+  // animation: background-opacity ease-in 1.5s forwards;
   @media only screen and (max-width: 700px) {
     background-position: center;
   }
@@ -110,6 +110,9 @@
   padding: 1em;
   font-size: 1em;
 
+  a {
+    text-decoration: none;
+  }
   a:hover {
     text-decoration: none;
   }
@@ -148,7 +151,7 @@
 }
 
 .navigation-container {
-  marign-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .landing-client-login-wrapper {

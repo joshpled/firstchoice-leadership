@@ -14,7 +14,7 @@ function App() {
     <>
       <Route path="/home" render={(props) => <Main {...props} />} />
       <Route path="/client" render={(props) => <Client {...props} />} />
-      <Redirect from="/" to={rePath ? rePath : "/home/landing"} />;
+      <Redirect from="/" to={rePath ? rePath : "/home/landing"} />
     </>
   );
 }

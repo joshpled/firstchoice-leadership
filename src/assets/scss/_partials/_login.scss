@@ -14,9 +14,25 @@
       background: #7aa5a8;
       border: black;
     }
+    button {
+      margin-top: 10px;
+    }
   }
 
   a {
     color: #ededed;
+  }
+  @media screen and (max-width: 400px) {
+    display: block;
+    margin: auto;
+    max-width: 350px;
+    input {
+      width: 300px;
+    }
+    .card {
+      .btn {
+        width: 300px !important;
+      }
+    }
   }
 }

@@ -1,6 +1,9 @@
 .client-wrapper {
   display: flex;
   flex-direction: row;
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+  }
   place-content: center center;
   color: hsl(0, 0%, 69%);
   hr {
@@ -29,5 +32,73 @@
   }
   .btn-primary:active {
     border: black solid 1px;
+  }
+
+  .client-picture {
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 500px) {
+      display: block;
+      padding: unset;
+      button {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+        object-fit: scale-down;
+      }
+    }
+    img {
+      height: 10em;
+    }
+    button {
+      border: none;
+      background-color: rgba($color: #17374191, $alpha: 1);
+      color: white;
+      font-weight: 200;
+      text-shadow: 2px;
+      border-radius: 2px;
+    }
+    button:hover {
+      background-color: rgba($color: #2e708391, $alpha: 1);
+    }
+  }
+  .client-dashboard {
+    min-width: 40em;
+  }
+}
+.modal-content {
+  background-color: rgba($color: #17374191, $alpha: 0.8) !important;
+  color: rgb(224, 224, 224);
+  .btn-secondary {
+    background-color: unset;
+  }
+  button {
+    border: none;
+    background-color: rgba($color: #17374191, $alpha: 1);
+    color: white;
+    font-weight: 200;
+    text-shadow: 2px;
+    border-radius: 2px;
+  }
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    .edit-buttons {
+      display: flex;
+      justify-content: space-evenly;
+      input {
+        width: 16em;
+      }
+    }
+    .edit-inputs {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .changes-alert {
+    width: 50%;
+    padding: 5px;
+    font-size: small;
   }
 }

@@ -1,14 +1,13 @@
 import firebase from "firebase/app";
 import "firebase/auth";
+import "firebase/storage";
 
-const app = firebase.initializeApp({
-  apiKey: "AIzaSyAvmBTBFv36cu2ORipZti6KNxPHFq6jiyk",
-  authDomain: "firstchoiceleader-4261b.firebaseapp.com",
-  projectId: "firstchoiceleader-4261b",
-  storageBucket: "firstchoiceleader-4261b.appspot.com",
-  messagingSenderId: "793964320282",
-  appId: "1:793964320282:web:33361e425d9adc0cdaa3a3",
-});
+// eslint-disable-next-line no-unused-vars
+import firestore from "firebase/firestore";
+import config from "firebaseConfig";
 
+export const app = firebase.initializeApp(config);
 export const auth = app.auth();
-export default app;
+
+export const db = firebase.firestore();
+export const storage = firebase.storage();

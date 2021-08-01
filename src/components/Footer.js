@@ -1,6 +1,6 @@
 import React from "react";
 
-function Navigation() {
+function Footer() {
   return (
     <>
       <div className="landing-footer">
@@ -17,4 +17,4 @@ function Navigation() {
   );
 }
 
-export default Navigation;
+export default Footer;
