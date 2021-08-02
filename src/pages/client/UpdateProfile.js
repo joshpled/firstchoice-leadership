@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useAuth } from "context/AuthContext";
 import { Link, useHistory } from "react-router-dom";
+import firebase from "firebase/app";
 
 export default function UpdateProfile() {
   const emailRef = useRef();
@@ -9,8 +10,12 @@ export default function UpdateProfile() {
   const passwordConfirmRef = useRef();
   const { currentUser, updatePassword, updateEmail } = useAuth();
   const [error, setError] = useState("");
+  const [usereneteredpassword, setusereneteredpassword] = useState("");
+  const [showPasswordInput, setShowPasswordInput] = useState(true);
   const [loading, setLoading] = useState(false);
   const history = useHistory();
+
+  const credential = firebase.auth.EmailAuthProvider.credential(currentUser.email, usereneteredpassword);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -31,44 +36,81 @@ export default function UpdateProfile() {
 
     Promise.all(promises)
       .then(() => {
-        history.push("/");
+        const userRef = firebase.firestore().collection("users").doc(sessionStorage.id);
+        userRef.set({
+          name: sessionStorage.name,
+          email: emailRef.current.value,
+          image: sessionStorage.image,
+        });
+        history.push("/client/home");
       })
-      .catch(() => {
+      .catch((err) => {
         setError("Failed to update account");
+        console.log(err);
       })
       .finally(() => {
         setLoading(false);
       });
   }
 
+  const handleReauthenticate = (e) => {
+    e.preventDefault();
+    currentUser
+      .reauthenticateWithCredential(credential)
+      .then((resp) => {
+        setError("");
+        setShowPasswordInput(false);
+      })
+      .catch((err) => {
+        setError(err.message);
+      });
+  };
+
   return (
-    <>
+    <div className="update-profile">
       <Card>
-        <Card.Body>
-          <h2 className="text-center mb-4">Update Profile</h2>
-          {error && <Alert variant="danger">{error}</Alert>}
-          <Form onSubmit={handleSubmit}>
-            <Form.Group id="email">
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="email" ref={emailRef} required defaultValue={currentUser.email} />
-            </Form.Group>
-            <Form.Group id="password">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" ref={passwordRef} placeholder="Leave blank to keep the same" />
-            </Form.Group>
-            <Form.Group id="password-confirm">
-              <Form.Label>Password Confirmation</Form.Label>
-              <Form.Control type="password" ref={passwordConfirmRef} placeholder="Leave blank to keep the same" />
-            </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
-              Update
-            </Button>
-          </Form>
-        </Card.Body>
+        {error && (
+          <Alert variant="danger" style={{ margin: "10px" }}>
+            {error}
+          </Alert>
+        )}
+        {showPasswordInput ? (
+          <>
+            <br></br>
+            <label>Re-Enter Password</label>
+            <Form onSubmit={handleReauthenticate}>
+              <Form.Control type="password" value={usereneteredpassword} onChange={(e) => setusereneteredpassword(e.target.value)} />
+              <Button type="submit">Submit</Button>
+            </Form>
+            <br></br>
+          </>
+        ) : (
+          <Card.Body>
+            <h2 className="text-center mb-4">Update Profile</h2>
+            {error && <Alert variant="danger">{error}</Alert>}
+            <Form onSubmit={handleSubmit}>
+              <Form.Group id="email">
+                <Form.Label>Email</Form.Label>
+                <Form.Control type="email" ref={emailRef} required defaultValue={currentUser.email} />
+              </Form.Group>
+              <Form.Group id="password">
+                <Form.Label>Password</Form.Label>
+                <Form.Control type="password" ref={passwordRef} placeholder="Leave blank to keep the same" />
+              </Form.Group>
+              <Form.Group id="password-confirm">
+                <Form.Label>Password Confirmation</Form.Label>
+                <Form.Control type="password" ref={passwordConfirmRef} placeholder="Leave blank to keep the same" />
+              </Form.Group>
+              <Button disabled={loading} className="w-100" type="submit">
+                Update
+              </Button>
+            </Form>
+          </Card.Body>
+        )}
       </Card>
       <div className="w-100 text-center mt-2">
-        <Link to="/">Cancel</Link>
+        <Link to="/client/home">Cancel</Link>
       </div>
-    </>
+    </div>
   );
 }

@@ -1,10 +1,10 @@
 const config = {
-  apiKey: "AIzaSyAvmBTBFv36cu2ORipZti6KNxPHFq6jiyk",
-  authDomain: "firstchoiceleader-4261b.firebaseapp.com",
-  projectId: "firstchoiceleader-4261b",
-  storageBucket: "firstchoiceleader-4261b.appspot.com",
-  messagingSenderId: "793964320282",
-  appId: "1:793964320282:web:33361e425d9adc0cdaa3a3",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_APPID,
 };
 
 export default config;

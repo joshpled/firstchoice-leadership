@@ -3,7 +3,6 @@ import { Button, Spinner } from "react-bootstrap";
 import { useAuth } from "context/AuthContext";
 import { useHistory } from "react-router-dom";
 import firebase from "firebase/app";
-import { storage } from "../../firebase";
 import { EditProfile } from "components";
 
 function ClientHome() {
@@ -14,51 +13,13 @@ function ClientHome() {
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [changePic, setChange] = useState(false);
 
   const [userInfo, setUserInfo] = useState({});
   const [userChanged, setChanged] = useState(false);
   const [show, setShow] = useState(false);
-  const [uploading, setUploading] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
-  const [file, setFile] = useState(null);
-  // eslint-disable-next-line no-unused-vars
-  const [url, setURL] = useState("");
-
-  function handleImageAsFile(e) {
-    setFile(e.target.files[0]);
-  }
-
-  function handleImageUpload(e) {
-    e.preventDefault();
-    setUploading(true);
-    const ref = storage.ref(`/images/${file.name}`);
-    const userRef = firebase.firestore().collection("users").doc(userInfo.id);
-    const uploadTask = ref.put(file);
-    uploadTask.on("state_changed", console.log, console.error, () => {
-      ref.getDownloadURL().then((url) => {
-        setFile(null);
-        setURL(url);
-        userRef
-          .set({
-            name: userInfo.name,
-            email: userInfo.email,
-            image: url,
-          })
-          .then((docRef) => {
-            setUserInfo({ name: userInfo.name, email: userInfo.email, image: url });
-            setUploading(false);
-            setChange(false);
-          })
-          .catch((error) => {
-            console.error("Error adding document: ", error);
-          });
-      });
-    });
-  }
 
   const handleCancel = () => {
     setLoading(true);
@@ -83,6 +44,29 @@ function ClientHome() {
     setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
   };
 
+  const handleSaveChanges = async (e) => {
+    setLoading(true);
+    const userRef = firebase.firestore().collection("users").doc(userInfo.id);
+    userRef
+      .set({
+        name: userInfo.name,
+        email: userInfo.email,
+        image: userInfo.image,
+      })
+      .then((docRef) => {
+        setUserInfo({ name: userInfo.name, email: userInfo.email, image: userInfo.image, id: userInfo.id });
+        sessionStorage.setItem("name", userInfo.name);
+        sessionStorage.setItem("email", userInfo.email);
+        sessionStorage.setItem("id", userInfo.id);
+        sessionStorage.setItem("image", userInfo.image);
+        setLoading(false);
+        handleClose();
+      })
+      .catch((error) => {
+        console.error("Error adding document: ", error);
+      });
+  };
+
   useEffect(() => {
     // eslint-disable-next-line no-unused-vars
     let unmounted = false;
@@ -95,7 +79,6 @@ function ClientHome() {
         sessionStorage.setItem("email", email);
         sessionStorage.setItem("id", doc.id);
         sessionStorage.setItem("image", image);
-
         setLoading(false);
       });
     });
@@ -106,17 +89,15 @@ function ClientHome() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  async function handleLogout() {
+  const handleLogout = async () => {
     setError("");
     try {
       await logout();
-      if (!currentUser) {
-        history.push("/");
-      }
+      history.push("/home/landing");
     } catch {
       setError("Failed to log out");
     }
-  }
+  };
 
   return (
     <div className="client-wrapper">
@@ -133,9 +114,10 @@ function ClientHome() {
               <img src={userInfo.image} alt="client" height="200px" />
               <button onClick={handleShow}>Edit Profile</button>
             </div>
-            {userInfo.name}
-            <br></br>
-            {currentUser && currentUser.email}
+            <div className="client-text">
+              <p>{userInfo.name}</p>
+              <p>{currentUser && currentUser.email}</p>
+            </div>
 
             <div className="client-buttons">
               <Button onClick={handleLogout}>Log Out</Button>
@@ -155,11 +137,8 @@ function ClientHome() {
         handleChange={handleChange}
         handleCancel={handleCancel}
         userInfo={userInfo}
-        handleImageAsFile={handleImageAsFile}
-        handleImageUpload={handleImageUpload}
-        uploading={uploading}
-        changePic={changePic}
-        setChange={setChange}
+        setUserInfo={setUserInfo}
+        handleSaveChanges={handleSaveChanges}
       />
     </div>
   );

@@ -9,14 +9,16 @@
   hr {
     border: 1px solid rgb(152, 152, 152);
   }
-  div {
-    margin: 20px;
-    padding: 20px;
-  }
+  // div {
+  //   margin: 20px;
+  //   padding: 20px;
+  // }
   .client-menu,
   .client-dashboard {
     background: hsla(0, 0%, 0%, 0.461);
     border-radius: 0.25em;
+    margin: 15px;
+    padding: 15px;
   }
   .btn-primary {
     background-color: hsla(0, 0%, 19%, 0.461);
@@ -33,6 +35,11 @@
   .btn-primary:active {
     border: black solid 1px;
   }
+  .client-text {
+    p {
+      margin: 5px;
+    }
+  }
 
   .client-picture {
     display: flex;
@@ -45,12 +52,10 @@
       }
       img {
         width: 100%;
-        object-fit: scale-down;
+        object-fit: contain;
       }
     }
-    img {
-      height: 10em;
-    }
+
     button {
       border: none;
       background-color: rgba($color: #17374191, $alpha: 1);
@@ -90,6 +95,11 @@
       input {
         width: 16em;
       }
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
     }
     .edit-inputs {
       display: flex;
@@ -101,4 +111,18 @@
     padding: 5px;
     font-size: small;
   }
+}
+
+.enter-password {
+  position: absolute;
+  z-index: 9999;
+  input {
+    margin: 5px;
+  }
+  button {
+    margin-top: 10px;
+  }
+}
+.password-submit {
+  float: right;
 }
