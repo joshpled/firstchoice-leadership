@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Form, Button, Card, Alert } from "react-bootstrap";
+import { Form, Button, Card, Alert, FloatingLabel } from "react-bootstrap";
 import { useAuth } from "context/AuthContext";
 import { Link } from "react-router-dom";
 
@@ -27,7 +27,7 @@ export default function ForgotPassword() {
   }
 
   return (
-    <div className="update-profile">
+    <div className="forgot-password-wrapper">
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Password Reset</h2>
@@ -35,20 +35,21 @@ export default function ForgotPassword() {
           {message && <Alert variant="success">{message}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="email" ref={emailRef} required />
+              <FloatingLabel controlId="floatingInput" label="Email address" className="mb-3 forgot-password-label">
+                <Form.Control type="email" ref={emailRef} required />
+              </FloatingLabel>
             </Form.Group>
             <Button disabled={loading} className="w-100" type="submit">
               Reset Password
             </Button>
           </Form>
           <div className="w-100 text-center mt-3">
-            <Link to="/login">Login</Link>
+            <Link to="/client/login">Login</Link>
           </div>
         </Card.Body>
       </Card>
       <div className="w-100 text-center mt-2">
-        Need an account? <Link to="/signup">Sign Up</Link>
+        Need an account? <Link to="/client/signup">Sign Up</Link>
       </div>
     </div>
   );
