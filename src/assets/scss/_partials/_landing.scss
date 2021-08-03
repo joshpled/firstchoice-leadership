@@ -104,6 +104,7 @@
 }
 
 .landing-navigation {
+  // display: none;
   position: fixed;
   display: flex;
   justify-content: center;
@@ -164,8 +165,3 @@
     font-size: larger;
   }
 }
-
-// .landing-wrapper {
-//   position: fixed;
-//   overflow: scroll;
-// }
