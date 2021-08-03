@@ -8,6 +8,11 @@
 @import "./_partials/login";
 @import "./_partials/client";
 @import "./_partials/update-profile";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+* {
+  font-family: "Lato", sans-serif;
+}
 
 body {
   background-color: black !important;

@@ -110,7 +110,7 @@ function ClientHome() {
         <>
           <div className="client-menu">
             <div className="client-picture">
-              <img src={userInfo.image} alt="client" height="200px" />
+              {userInfo.imgage ? <img src={userInfo.image} alt="client" height="200px" /> : <p>NO PICTURE</p>}
               <button onClick={handleShow}>Edit Profile</button>
             </div>
             <div className="client-text">
