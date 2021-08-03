@@ -29,7 +29,7 @@ function Main() {
         </div>
       </div>
 
-      <div>
+      <div className="landing-wrapper">
         <Switch>{getRoutes(routes)}</Switch>
       </div>
       <Footer />

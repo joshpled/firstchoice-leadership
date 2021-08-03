@@ -9,8 +9,6 @@ function ClientHome() {
   const history = useHistory();
   const { currentUser, logout } = useAuth();
 
-  const userCollectionRef = currentUser && firebase.firestore().collection("users").where("email", "==", currentUser.email);
-
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -71,6 +69,7 @@ function ClientHome() {
     // eslint-disable-next-line no-unused-vars
     let unmounted = false;
     setLoading(true);
+    const userCollectionRef = firebase.firestore().collection("users").where("email", "==", currentUser.email);
     userCollectionRef.onSnapshot((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         const { name, email, image } = doc.data();

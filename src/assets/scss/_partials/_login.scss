@@ -36,3 +36,24 @@
     }
   }
 }
+.sign-in-with-google {
+  display: flex;
+  justify-content: center;
+  svg {
+    cursor: pointer;
+  }
+  svg:hover {
+    filter: brightness(125%);
+  }
+}
+
+.password-input-div {
+  position: relative;
+  .password-open-eye {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: gray;
+    cursor: pointer;
+  }
+}
