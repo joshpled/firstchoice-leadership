@@ -12,7 +12,6 @@ function Footer() {
         </p>
         <p className="footer-right">&#169; Copyright 2021</p>
       </div>
-      <div style={{ clear: "both" }}></div>
     </>
   );
 }
