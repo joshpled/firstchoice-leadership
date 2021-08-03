@@ -4,7 +4,7 @@ import { useAuth } from "context/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 // import firebase from "firebase/app";
 // import { ReactSVG } from "react-svg";
-// import signingoogle from "./sign-in-google.svg";
+// import signingoogle from "assets/images/sign-in-google.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Login() {

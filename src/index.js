@@ -5,18 +5,14 @@ import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { BrowserRouter } from "react-router-dom";
-
 import App from "./App";
 
 import { AuthProvider } from "./context/AuthContext";
 
 ReactDOM.render(
-  <BrowserRouter>
-    <AuthProvider>
-      <App />
-    </AuthProvider>
-  </BrowserRouter>,
+  <AuthProvider>
+    <App />
+  </AuthProvider>,
   document.getElementById("root")
 );
 // If you want your app to work offline and load faster, you can change
