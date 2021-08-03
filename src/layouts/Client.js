@@ -6,6 +6,7 @@ import routes from "routes";
 
 function Main() {
   const location = useLocation();
+
   const getRoutes = (routes) => {
     return routes.map((prop) => {
       if (prop.layout === "/client") {
@@ -15,11 +16,13 @@ function Main() {
       }
     });
   };
+
   useEffect(() => {
     sessionStorage.setItem("path", location.pathname);
   });
+
   return (
-    <div className="landing-container" style={{ animation: "none" }}>
+    <div className="landing-container">
       <div className="navigation-container">
         <div id="main-navbar">
           <Navigation />
@@ -29,7 +32,7 @@ function Main() {
         </div>
       </div>
 
-      <div>
+      <div className="client-wrapper">
         <Switch>{getRoutes(routes)}</Switch>
       </div>
       <Footer />

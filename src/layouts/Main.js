@@ -6,6 +6,7 @@ import routes from "routes";
 
 function Main() {
   const location = useLocation();
+
   const getRoutes = (routes) => {
     return routes.map((prop) => {
       if (prop.layout === "/home") {
@@ -15,9 +16,11 @@ function Main() {
       }
     });
   };
+
   useEffect(() => {
     sessionStorage.setItem("path", location.pathname);
   });
+
   return (
     <div className="landing-container">
       <div className="navigation-container">

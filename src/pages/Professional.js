@@ -1,14 +1,29 @@
 import React from "react";
 
 function Professional() {
+  const { title, para1 } = data;
   return (
     <div className="professional-wrapper">
       <div>
-        <h1>WHAT IS COACHING?</h1>
+        <h1>{title}</h1>
       </div>
       <div className="professional-main">
-        <p></p>
-        The International Coach Federation defines coaching as “partnering with clients in a thought-provoking and creative process that inspires them to
+        <p>{para1}</p>
+      </div>
+    </div>
+  );
+}
+
+export default Professional;
+
+const data = {
+  title: "WHAT IS COACHING?",
+  para1:
+    "The International Coach Federation defines coaching as “partnering with clients in a thought-provoking and creative process that inspires them to maximize their personal and professional potential.”",
+};
+
+/*
+      The International Coach Federation defines coaching as “partnering with clients in a thought-provoking and creative process that inspires them to
         maximize their personal and professional potential.” Coaching is the art of relating with a person productively in a way that energizes them to achieve
         extraordinary results in their desired objective. Professionally trained in core coaching competencies and coaching ethics, coaches partner with clients
         to identify important goals and priorities, strategize about how to reach them, and overcome obstacles that crop up along the way. A life forming Coach
@@ -27,9 +42,4 @@ function Professional() {
         Effectiveness. Authentic Leadership ‍‍‍‍‍‍that creates healthy workplace cultures for workers, leaders, vendors, and customers. Every conversation
         should move the dial towards greater buy-in to the values and vision. ‍‍‍ Loving our Labor ‍‍‍‍‍‍by making a living doing what we love. Every employee
         and staff should be coached to see how their work-life is key to the intersection of their Purpose and Passion. ‍‍
-      </div>
-    </div>
-  );
-}
-
-export default Professional;
+        */

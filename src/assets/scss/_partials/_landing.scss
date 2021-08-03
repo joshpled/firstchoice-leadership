@@ -104,7 +104,6 @@
 }
 
 .landing-navigation {
-  // display: none;
   position: fixed;
   display: flex;
   justify-content: center;
@@ -164,4 +163,27 @@
     background: none;
     font-size: larger;
   }
+}
+
+// .landing-wrapper {
+//   position: fixed;
+//   overflow: scroll;
+// }
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 6;
+}
+.div2 {
+  grid-area: 5 / 1 / 6 / 6;
+}
+.div3 {
+  grid-area: 2 / 1 / 5 / 6;
 }
