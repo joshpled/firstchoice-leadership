@@ -22,8 +22,8 @@ function Main() {
   });
 
   return (
-    <div className="landing-container">
-      <div className="navigation-container">
+    <div className="main-div">
+      <div className="navigation-div">
         <div id="main-navbar">
           <Navigation />
         </div>
@@ -32,10 +32,12 @@ function Main() {
         </div>
       </div>
 
-      <div className="landing-wrapper">
+      <div className="main-content-div">
         <Switch>{getRoutes(routes)}</Switch>
       </div>
-      <Footer />
+      <div className="footer-div">
+        <Footer />
+      </div>
     </div>
   );
 }

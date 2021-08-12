@@ -1,10 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useAuth } from "context/AuthContext";
 
 function Navigation() {
-  const { currentUser } = useAuth();
-
   return (
     <div className="landing-navigation">
       <Link to="/home/landing">
@@ -26,7 +23,7 @@ function Navigation() {
       <Link to="/home/about">
         <p className="link">ABOUT</p>
       </Link>
-      {currentUser ? (
+      {false ? (
         <>
           <span className="separator">|</span>
           <Link to="/client/home">

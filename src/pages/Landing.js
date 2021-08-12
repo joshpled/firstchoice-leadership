@@ -1,12 +1,10 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { useAuth } from "context/AuthContext";
 
 function Landing() {
-  const { currentUser } = useAuth();
   return (
-    <div>
+    <div className="landing-content-div-test">
       <header className="landing-header">
         <h1>FIRST CHOICE</h1>
         <h1>LEADERSHIP</h1>
@@ -27,9 +25,9 @@ function Landing() {
           </Link>
         </div>
         <div className="landing-client-login-wrapper">
-          <Link to={currentUser ? "/client/home" : "/client/login"}>
+          <Link to={true ? "/client/home" : "/client/login"}>
             <Button variant="secondary" value="professional">
-              {currentUser ? "Client Home" : "Client Login"}
+              {true ? "Client Home" : "Client Login"}
             </Button>
           </Link>
         </div>
