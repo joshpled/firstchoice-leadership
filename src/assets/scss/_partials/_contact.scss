@@ -3,11 +3,19 @@
   font-weight: 300;
   display: flex;
   justify-content: center;
-}
 
-form {
-  width: 400px;
-  text-align: left;
+  form {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    label {
+      text-align: left;
+      margin: 10px 0;
+    }
+    textarea {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .contact-wrapper {
@@ -22,8 +30,10 @@ form {
 .contact-content-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
   .contact-info {
     margin-right: 20px;
+    color: rgb(207, 207, 207);
   }
 }
 
