@@ -1,4 +1,4 @@
-import Landing from "./Landing";
+import Home from "./Home";
 import Personal from "./Personal";
 import Professional from "./Professional";
 import Contact from "./Contact";
@@ -9,5 +9,6 @@ import Signup from "./client/Signup";
 import ForgotPassword from "./client/ForgotPassword";
 import UpdateProfile from "./client/UpdateProfile";
 import ClientHome from "./client/ClientHome";
+import NotFound from "./NotFound";
 
-export { ClientHome, Landing, Personal, Professional, Contact, About, Login, Signup, ForgotPassword, UpdateProfile };
+export { ClientHome, Home, Personal, Professional, Contact, About, Login, Signup, ForgotPassword, UpdateProfile, NotFound };

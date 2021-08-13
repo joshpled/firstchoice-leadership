@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function Landing() {
+export default function Home() {
   return (
     <div className="landing-content-div-test">
       <header className="landing-header">
@@ -35,5 +35,3 @@ function Landing() {
     </div>
   );
 }
-
-export default Landing;

@@ -1,0 +1,19 @@
+.footer {
+  position: fixed;
+  font-weight: 200;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1em;
+  color: $contrast-gray;
+  z-index: 0;
+  .footer-left {
+    float: left;
+  }
+  .footer-right {
+    float: right;
+  }
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
+}

@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <div className="landing-footer">
+      <div className="footer">
         <p className="footer-left">
           Made with &#9829; by{" "}
           <a href="https://www.joshuapleduc.com/" style={{ textDecoration: "none", color: "white" }}>

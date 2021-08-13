@@ -1,22 +1,41 @@
-import Client from "layouts/Client.js";
-import Main from "layouts/Main.js";
 import React, { useEffect, useState } from "react";
-import { Redirect, Route, BrowserRouter } from "react-router-dom";
+import { Route, Switch, useLocation } from "react-router-dom";
 import "./context/icons";
+import { Navigation, Footer } from "components";
+import generateKey from "context/generateKey";
+import routes from "routes";
 
 function App() {
-  //saves last path visited to redirect
-  const [lastPath, setLastPath] = useState("");
+  const location = useLocation();
+  const [navRoutes, setNavRoutes] = useState([]);
+
   useEffect(() => {
-    setLastPath(sessionStorage.getItem("path"));
+    setNavRoutes(
+      routes.map((prop) => {
+        return <Route exact path={prop.path} key={generateKey(prop.component)} render={(props) => <prop.component {...props} />} />;
+      })
+    );
   }, []);
 
+  useEffect(() => {
+    sessionStorage.setItem("path", location.pathname);
+  });
+
   return (
-    <BrowserRouter>
-      <Route path="/home" render={(props) => <Main {...props} />} />
-      <Route path="/client" render={(props) => <Client {...props} />} />
-      <Redirect from="/" to={lastPath ? lastPath : "/home/landing"} />
-    </BrowserRouter>
+    <div className="landing-container">
+      <div>
+        <div>
+          <Navigation />
+        </div>
+      </div>
+
+      <div>
+        <Switch>{navRoutes}</Switch>
+      </div>
+      <div>
+        <Footer />
+      </div>
+    </div>
   );
 }
 

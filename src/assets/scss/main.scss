@@ -1,19 +1,13 @@
 @import "./_partials/landing";
 @import "./_partials/personal";
 @import "./_partials/colors";
-@import "./_partials/mainStyles";
 @import "./_partials/professional";
 @import "./_partials/contact";
 @import "./_partials/about";
-@import "./_partials/login";
 @import "./_partials/client";
-@import "./_partials/update-profile";
+@import "./_partials/footer";
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 
 * {
   font-family: "Lato", sans-serif;
-}
-
-body {
-  background-color: black !important;
 }

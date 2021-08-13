@@ -4,23 +4,23 @@ import { Link } from "react-router-dom";
 function Navigation() {
   return (
     <div className="landing-navigation">
-      <Link to="/home/landing">
+      <Link to="/">
         <p className="link">HOME</p>
       </Link>
       <span className="separator">|</span>
-      <Link to="/home/personal">
+      <Link to="/personal">
         <p className="link">PERSONAL</p>
       </Link>
       <span className="separator">|</span>
-      <Link to="/home/professional">
+      <Link to="/professional">
         <p className="link">PROFESSIONAL</p>
       </Link>
       <span className="separator">|</span>
-      <Link to="/home/contact">
+      <Link to="/contact">
         <p className="link">CONTACT ME</p>
       </Link>
       <span className="separator">|</span>
-      <Link to="/home/about">
+      <Link to="/about">
         <p className="link">ABOUT</p>
       </Link>
       {false ? (

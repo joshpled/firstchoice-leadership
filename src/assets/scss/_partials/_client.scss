@@ -9,10 +9,7 @@
   hr {
     border: 1px solid rgb(152, 152, 152);
   }
-  // div {
-  //   margin: 20px;
-  //   padding: 20px;
-  // }
+
   .client-menu,
   .client-dashboard {
     background: hsla(0, 0%, 0%, 0.461);
@@ -72,6 +69,7 @@
     min-width: 40em;
   }
 }
+
 .modal-content {
   background-color: rgba($color: #17374191, $alpha: 0.8) !important;
   color: rgb(224, 224, 224);
@@ -111,18 +109,4 @@
     padding: 5px;
     font-size: small;
   }
-}
-
-.enter-password {
-  position: absolute;
-  z-index: 9999;
-  input {
-    margin: 5px;
-  }
-  button {
-    margin-top: 10px;
-  }
-}
-.password-submit {
-  float: right;
 }

@@ -5,8 +5,7 @@
   flex-direction: column;
   height: 100vh;
   justify-content: center;
-  background: linear-gradient(0deg, hsla(0, 0%, 0%, 0.8), hsla(0, 0%, 0%, 0.8)),
-    url("https://cdn.pixabay.com/photo/2015/03/26/09/41/tie-690084_1280.jpg") no-repeat;
+  background: linear-gradient(0deg, hsla(0, 0%, 0%, 0.8), hsla(0, 0%, 0%, 0.8)), url("../images/background.png") no-repeat;
   background-size: cover;
   // animation: background-opacity ease-in 1.5s forwards;
   @media only screen and (max-width: 700px) {
@@ -133,68 +132,10 @@
   }
 }
 
-.landing-footer {
-  position: fixed;
-  font-weight: 100;
-
-  bottom: 0;
-  width: 100%;
-  padding: 1em;
-  font-size: 1em;
-  color: $contrast-gray;
-  .footer-left {
-    float: left;
-  }
-  .footer-right {
-    float: right;
-  }
-  @media only screen and (max-width: 700px) {
-    display: none;
-  }
+.main-content-div {
+  z-index: 1;
 }
 
 .navigation-container {
   margin-bottom: 10px;
-}
-
-.landing-client-login-wrapper {
-  display: block;
-  .btn {
-    background: none;
-    font-size: larger;
-  }
-}
-
-// .landing-wrapper {
-//   position: fixed;
-//   overflow: scroll;
-// }
-
-.main-div {
-  display: grid;
-  height: 100vh;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.5fr 3fr 0.5fr;
-  gap: 1px 0px;
-  grid-template-areas:
-    "navigation-div"
-    "main-content-div"
-    "footer-div";
-}
-.navigation-div {
-  grid-area: navigation-div;
-}
-.main-content-div {
-  grid-area: main-content-div;
-  overflow: scroll;
-}
-.footer-div {
-  grid-area: footer-div;
-}
-
-.landing-content-div-test {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
 }
