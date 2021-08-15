@@ -11,3 +11,5 @@ export const app = firebase.initializeApp({
   messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
   appId: process.env.REACT_APP_APPID,
 });
+
+export const db = firebase.firestore();

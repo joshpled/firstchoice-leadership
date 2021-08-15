@@ -13,12 +13,12 @@ export default function Home() {
       <div className="landing-buttons">
         <h1>Where would you like to start your journey?</h1>
         <div>
-          <Link to="/home/personal">
+          <Link to="/personal">
             <Button variant="secondary" value="personal">
               Personal
             </Button>
           </Link>
-          <Link to="/home/professional">
+          <Link to="/professional">
             <Button variant="secondary" value="professional">
               Professional
             </Button>
