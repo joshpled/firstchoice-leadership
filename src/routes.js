@@ -1,4 +1,4 @@
-import { ClientHome, Home, Login, Signup, UpdateProfile, ForgotPassword, Professional, Personal, Contact, About } from "pages";
+import { ClientHome, Home, Login, Signup, UpdateProfile, ForgotPassword, Professional, Personal, Contact, About, NotFound } from "pages";
 var routes = [
   {
     path: "/",
@@ -49,6 +49,10 @@ var routes = [
     path: "/forgot-password",
     name: "Forgot Password",
     component: ForgotPassword,
+  },
+  {
+    path: "*",
+    component: NotFound,
   },
 ];
 
