@@ -1,8 +1,12 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import { Button, Spinner } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../firebase";
 
 export default function Home() {
+  const [user, loading, error] = useAuthState(auth);
+
   return (
     <div className="landing-content-div-test">
       <header className="landing-header">
@@ -24,10 +28,17 @@ export default function Home() {
             </Button>
           </Link>
         </div>
+        {error && <h3>{error}</h3>}
+        {loading && (
+          <Spinner animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>
+        )}
+
         <div className="landing-client-login-wrapper">
-          <Link to={true ? "/client/home" : "/client/login"}>
+          <Link to={user ? "/client-home" : "/login"}>
             <Button variant="secondary" value="professional">
-              {true ? "Client Home" : "Client Login"}
+              {user ? "Client Home" : "Client Login"}
             </Button>
           </Link>
         </div>
