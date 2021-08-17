@@ -5,5 +5,6 @@ import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
 import EditProfile from "./ClientComponents/EditProfile";
 import ClientMessages from "./ClientComponents/ClientMessages";
+import BlogPost from "./BlogPost";
 
-export { EditProfile, ClientMessages, Navigation, InfoCard, Footer, ContactForm, ContactInfo };
+export { EditProfile, ClientMessages, Navigation, InfoCard, Footer, ContactForm, ContactInfo, BlogPost };

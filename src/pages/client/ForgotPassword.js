@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase";
-import { Button, Form, FloatingLabel, Alert, Spinner } from "react-bootstrap";
+import { Button, Form, FloatingLabel, Alert } from "react-bootstrap";
 
 export default function ForgotPassword() {
   const [email, setEmail] = useState("");

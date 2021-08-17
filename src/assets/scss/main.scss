@@ -1,12 +1,6 @@
-@import "./_partials/landing";
-@import "./_partials/personal";
-@import "./_partials/colors";
-@import "./_partials/professional";
-@import "./_partials/contact";
-@import "./_partials/about";
-@import "./_partials/client";
-@import "./_partials/footer";
-@import "./_partials/auth";
+@import "./_partials/landing", "./_partials/personal", "./_partials/colors", "./_partials/professional", "./_partials/contact", "./_partials/about",
+  "./_partials/client", "./_partials/footer", "./_partials/auth", "./_partials/navbar";
+
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 
 * {

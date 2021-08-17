@@ -7,7 +7,7 @@ export default function ContactForm() {
   const messages = db.collection("contact-form");
 
   return (
-    <>
+    <div className="contact-form-container">
       <Formik
         initialValues={{
           fullName: "",
@@ -36,6 +36,6 @@ export default function ContactForm() {
           </Button>
         </Form>
       </Formik>
-    </>
+    </div>
   );
 }

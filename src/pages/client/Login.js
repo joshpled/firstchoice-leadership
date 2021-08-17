@@ -8,25 +8,26 @@ export default function Login() {
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  // eslint-disable-next-line no-unused-vars
   const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth, email, password);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(email, password);
-    history.push("/client-home");
+    if (user !== undefined) history.push("/client-home");
   };
 
   return (
     <div className="auth-container">
       <div className="auth-box">
         <h1>Login</h1>
-        {error && <Alert variant="danger">{error.message}</Alert>}
         {loading ? (
           <Spinner animation="border" role="status">
             <span className="visually-hidden">Loading...</span>
           </Spinner>
         ) : (
           <>
+            {error && <Alert variant="danger">{error.message}</Alert>}
             <div className="auth-form">
               <Form onSubmit={(e) => handleSubmit(e)}>
                 <FloatingLabel controlId="floatingInput" label="Email address" className="mb-3">

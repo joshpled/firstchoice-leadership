@@ -1,4 +1,4 @@
-import { ClientHome, Home, Login, Signup, UpdateProfile, ForgotPassword, Professional, Personal, Contact, About, NotFound } from "pages";
+import { ClientHome, Home, Login, Signup, UpdateProfile, ForgotPassword, Professional, Personal, Contact, About, NotFound, Blog } from "pages";
 var routes = [
   {
     path: "/",
@@ -29,6 +29,12 @@ var routes = [
     name: "About",
     auth: false,
     component: About,
+  },
+  {
+    path: "/blog",
+    name: "Blog",
+    auth: false,
+    component: Blog,
   },
   {
     path: "/client-home",

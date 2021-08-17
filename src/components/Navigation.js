@@ -23,6 +23,10 @@ function Navigation() {
       <Link to="/about">
         <p className="link">ABOUT</p>
       </Link>
+      <span className="separator">|</span>
+      <Link to="/blog">
+        <p className="link">BLOG</p>
+      </Link>
       {false ? (
         <>
           <span className="separator">|</span>

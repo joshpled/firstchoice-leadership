@@ -5,10 +5,11 @@ import { auth } from "../../firebase";
 import { Button, Form, FloatingLabel, Alert, Spinner } from "react-bootstrap";
 
 export default function Signup() {
-  const history = useHistory();
+  // const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  // eslint-disable-next-line no-unused-vars
   const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth, email, password);
 
   const handleSubmit = (e) => {
