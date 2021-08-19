@@ -8,13 +8,13 @@ export default function Home() {
   const [user, loading, error] = useAuthState(auth);
 
   return (
-    <div className="landing-content-div-test">
-      <header className="landing-header">
+    <div className="home-container">
+      <header className="home-header">
         <h1>FIRST CHOICE</h1>
         <h1>LEADERSHIP</h1>
         <h3>LEARN TO TAKE LEAD IN YOUR PERSONAL AND PROFESSIONAL LIFE</h3>
       </header>
-      <div className="landing-buttons">
+      <div className="home-buttons">
         <h1>Where would you like to start your journey?</h1>
         <div>
           <Link to="/personal">
@@ -35,7 +35,7 @@ export default function Home() {
           </Spinner>
         )}
 
-        <div className="landing-client-login-wrapper">
+        <div>
           <Link to={user ? "/client-home" : "/login"}>
             <Button variant="secondary" value="professional">
               {user ? "Client Home" : "Client Login"}

@@ -3,8 +3,8 @@ import InfoCard from "./InfoCard";
 import Footer from "./Footer";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
-import EditProfile from "./ClientComponents/EditProfile";
-import ClientMessages from "./ClientComponents/ClientMessages";
 import BlogPost from "./BlogPost";
+import ClientProfile from "./ClientComponents/ClientProfile";
+import ProtectedRoute from "./ClientComponents/ProtectedRoute";
 
-export { EditProfile, ClientMessages, Navigation, InfoCard, Footer, ContactForm, ContactInfo, BlogPost };
+export { Navigation, InfoCard, Footer, ContactForm, ContactInfo, BlogPost, ClientProfile, ProtectedRoute };

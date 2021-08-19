@@ -1,0 +1,41 @@
+.custom-card {
+  width: 500px;
+  height: 400px;
+  position: relative;
+  margin: 10px;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  border-radius: 10px;
+}
+
+.custom-card-title {
+  text-align: center;
+  font-weight: 400;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.custom-card-subtitle {
+  font-weight: 300;
+  text-align: center;
+}
+
+.custom-card-body {
+  @include flex-center-column;
+  position: absolute;
+  top: 84px;
+  bottom: 58px;
+  left: 0;
+  right: 0;
+  padding: 0px 10px;
+  font-weight: 300;
+  word-wrap: break-word;
+  line-height: 30px;
+  word-spacing: 5px;
+}
+
+.custom-card-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+}

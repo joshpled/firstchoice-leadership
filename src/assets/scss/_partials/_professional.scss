@@ -1,8 +1,5 @@
-@use "colors";
-@use "mixins";
-
 .professional-wrapper {
-  @include mixins.flex-center-column;
+  @include flex-center-column;
   color: $text-white;
 }
 

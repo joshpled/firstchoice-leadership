@@ -1,30 +1,25 @@
-import { useEffect } from "react";
-
 import { useAuthState } from "react-firebase-hooks/auth";
-import firebase from "firebase/app";
-import { useHistory } from "react-router-dom";
+import { Spinner, Alert } from "react-bootstrap";
 
 import { auth } from "../../firebase";
 
-import { Button } from "react-bootstrap";
+import { ClientProfile } from "components";
 
 export default function ClientHome() {
-  const history = useHistory();
+  const [user, loading, error] = useAuthState(auth);
 
-  const logout = () => {
-    firebase
-      .auth()
-      .signOut()
-      .then(() => {
-        history.push("/");
-      });
-  };
-  const [user] = useAuthState(auth);
-
-  return (
-    <div>
-      <h1 style={{ color: "white" }}>{user ? user.email : "none"}</h1>
-      <Button onClick={() => logout()}>Logout</Button>
+  return loading ? (
+    <Spinner animation="border" role="status">
+      <span className="visually-hidden">Loading...</span>
+    </Spinner>
+  ) : (
+    <div className="client-home-wrapper">
+      {error && <Alert variant="danger">{error.message}</Alert>}
+      <div className="client-home-container">
+        <ClientProfile />
+        <div className="client-divider"></div>
+        <div className="client-tabs">Hello</div>
+      </div>
     </div>
   );
 }
