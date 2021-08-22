@@ -5,6 +5,6 @@ import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
 import BlogPost from "./BlogPost";
 import ClientProfile from "./ClientComponents/ClientProfile";
-import ProtectedRoute from "./ClientComponents/ProtectedRoute";
+import Loading from "./Loading";
 
-export { Navigation, InfoCard, Footer, ContactForm, ContactInfo, BlogPost, ClientProfile, ProtectedRoute };
+export { Navigation, InfoCard, Footer, ContactForm, ContactInfo, BlogPost, ClientProfile, Loading };

@@ -8,21 +8,17 @@ import generateKey from "context/generateKey";
 // import { auth } from "./firebase";
 //compnents
 import { Navigation, Footer } from "components";
-import { ProtectedRoute } from "components";
 //styling
 import "./context/icons";
 
 export default function App() {
   const location = useLocation();
   const [navRoutes, setNavRoutes] = useState([]);
-  // const [user] = useAuthState(auth);
+  // const [user, loading, error] = useAuthState(auth);
 
   useEffect(() => {
     setNavRoutes(
       routes.map((prop) => {
-        // if (prop.auth === true) {
-        //   return <ProtectedRoute />;
-        // }
         return <Route exact path={prop.path} key={generateKey(prop.component)} render={(props) => <prop.component {...props} />} />;
       })
     );
@@ -35,9 +31,7 @@ export default function App() {
   return (
     <div className="main-container">
       <Navigation />
-      <div className="main-wrapper">
-        <Switch>{navRoutes}</Switch>
-      </div>
+      <Switch>{navRoutes}</Switch>
       <Footer />
     </div>
   );

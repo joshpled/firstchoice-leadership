@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Navigation() {
   return (
-    <div className="landing-navigation">
+    <div className="navigation-container">
       <Link to="/">
         <p className="link">HOME</p>
       </Link>

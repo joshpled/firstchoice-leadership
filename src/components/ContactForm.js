@@ -22,7 +22,7 @@ export default function ContactForm() {
           }
         }}
       >
-        <Form validateOnChange>
+        <Form>
           <label htmlFor="fullName">Full Name</label>
           <Field id="fullName" name="fullName" placeholder="Full Name" required />
 

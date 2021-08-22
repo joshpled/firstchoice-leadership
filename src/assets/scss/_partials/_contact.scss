@@ -1,3 +1,14 @@
+.contact-wrapper {
+  @include flex-center-column;
+  height: 100%;
+  overflow: scroll;
+}
+.contact-header {
+  text-align: center;
+  font-weight: 200;
+  color: white;
+  margin-bottom: 30px;
+}
 .contact-form-container {
   color: white;
   font-weight: 300;
@@ -18,42 +29,19 @@
   }
 }
 
-.contact-wrapper {
-  .contact-header {
-    text-align: center;
-    font-weight: 200;
-    color: white;
-    margin-bottom: 30px;
+.contact-content-wrapper {
+  @include flex-center-column;
+  flex-direction: row;
+  @include for-phone-only {
+    flex-direction: column;
   }
 }
 
-.contact-content-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .contact-info {
-    margin-right: 20px;
-    color: rgb(207, 207, 207);
-  }
+.contact-info {
+  margin-right: 20px;
+  color: rgb(207, 207, 207);
 }
 
 .contact-emailphone {
   margin-bottom: 20px;
-}
-
-@media only screen and (max-width: 770px) {
-  .contact-header {
-    font-size: 2rem;
-  }
-  .contact-form-container {
-    flex-direction: column;
-    max-width: 100vw;
-    padding: 10px;
-    .form-control {
-      width: calc(100vw - 30px);
-    }
-    form {
-      margin-top: 20px;
-    }
-  }
 }
