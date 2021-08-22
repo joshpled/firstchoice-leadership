@@ -8,11 +8,7 @@ import { ClientProfile } from "components";
 export default function ClientHome() {
   const [user, loading, error] = useAuthState(auth);
 
-  return loading ? (
-    <Spinner animation="border" role="status">
-      <span className="visually-hidden">Loading...</span>
-    </Spinner>
-  ) : (
+  return (
     <div className="client-home-wrapper">
       {error && <Alert variant="danger">{error.message}</Alert>}
       <div className="client-home-container">

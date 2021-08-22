@@ -1,26 +1,35 @@
 import React, { useState } from "react";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useAuth } from "../../context/AuthContext";
 import { Link, useHistory } from "react-router-dom";
-import { auth } from "../../firebase";
 import { Button, Form, FloatingLabel, Alert, Spinner } from "react-bootstrap";
 
 export default function Signup() {
-  // const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  // eslint-disable-next-line no-unused-vars
-  const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth, email, password);
+  const { signup } = useAuth();
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const history = useHistory();
 
-  const handleSubmit = (e) => {
+  async function handleSubmit(e) {
     e.preventDefault();
-    console.log("Not Setup");
-    // if (password === confirmPassword) {
-    //   createUserWithEmailAndPassword(email, password);
-    //   history.push("/client-home");
-    // } else {
-    // }
-  };
+
+    if (password !== confirmPassword) {
+      return setError("Passwords do not match");
+    }
+
+    try {
+      setError("");
+      setLoading(true);
+      await signup(email, password);
+      history.push("/client-home");
+    } catch {
+      setError("Failed to create an account");
+    }
+
+    setLoading(false);
+  }
 
   return (
     <div className="auth-container">

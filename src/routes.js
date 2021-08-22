@@ -37,12 +37,6 @@ var routes = [
     component: Blog,
   },
   {
-    path: "/client-home",
-    name: "Client Home",
-    auth: true,
-    component: ClientHome,
-  },
-  {
     path: "/login",
     name: "Login",
     auth: false,
@@ -53,12 +47,6 @@ var routes = [
     name: "Sign Up",
     auth: false,
     component: Signup,
-  },
-  {
-    path: "/update-profile",
-    name: "Update Profile",
-    auth: true,
-    component: UpdateProfile,
   },
   {
     path: "/forgot-password",

@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 //third-party
-// import { useAuthState } from "react-firebase-hooks/auth";
 //local
+import { AuthProvider } from "./context/AuthContext";
 import routes from "routes";
 import generateKey from "context/generateKey";
-// import { auth } from "./firebase";
+import PrivateRoute from "components/PrivateRoute";
 //compnents
 import { Navigation, Footer } from "components";
 //styling
 import "./context/icons";
+import { ClientHome, UpdateProfile } from "pages";
 
 export default function App() {
   const location = useLocation();
   const [navRoutes, setNavRoutes] = useState([]);
-  // const [user, loading, error] = useAuthState(auth);
 
   useEffect(() => {
     setNavRoutes(
@@ -31,7 +31,14 @@ export default function App() {
   return (
     <div className="main-container">
       <Navigation />
-      <Switch>{navRoutes}</Switch>
+      <AuthProvider>
+        <Switch>
+          <PrivateRoute exact path="/client-home" component={ClientHome} />
+          <PrivateRoute exact path="/update-profile" component={UpdateProfile} />
+          {navRoutes}
+        </Switch>
+      </AuthProvider>
+
       <Footer />
     </div>
   );

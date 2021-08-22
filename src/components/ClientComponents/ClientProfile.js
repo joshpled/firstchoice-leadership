@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { auth, storage } from "../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Spinner, Button } from "react-bootstrap";
+import { Spinner, Button, Image } from "react-bootstrap";
 import firebase from "firebase/app";
 
 export default function ClientProfile() {
@@ -21,10 +21,6 @@ export default function ClientProfile() {
       .then(() => {
         history.push("/");
       });
-  };
-
-  const handleFileSelect = async () => {
-    document.getElementById("myInput").click();
   };
 
   const handleImageUpload = () => {
@@ -52,36 +48,13 @@ export default function ClientProfile() {
   return (
     <div className="client-profile">
       <div className="client-picture">
-        {photoLoading ? (
-          <Spinner animation="border" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </Spinner>
-        ) : (
-          <img src={user.photoURL} alt="user" />
-        )}
+        <Image src={user.photoURL} alt="user" />
       </div>
       <div className="client-details">
-        <div id="client-name">{user.displayName}</div>
-        <div id="client-email">{user.email}</div>
+        <div className="client-name">{user.displayName}</div>
+        <div className="client-email">{user.email}</div>
         <div className="client-settings">
-          <input id="myInput" type="file" style={{ visibility: "hidden" }} />
-          {photoLoading ? (
-            <Spinner animation="border" role="status">
-              <span className="visually-hidden">Loading...</span>
-            </Spinner>
-          ) : file ? (
-            <Button onClick={() => handleImageUpload()}>Upload Picture</Button>
-          ) : (
-            <Button
-              onClick={async (e) => {
-                setPhotoLoading(true);
-                await document.getElementById("myInput").click();
-                await setFile(document.getElementById("myInput").files[0]);
-              }}
-            >
-              Change Picture
-            </Button>
-          )}
+          <Button>Change Picture</Button>
           <Button>Change Email</Button>
           <Button>Change Password</Button>
           <Button onClick={() => logout()}>Logout</Button>

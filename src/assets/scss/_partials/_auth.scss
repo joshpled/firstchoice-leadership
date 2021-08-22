@@ -50,3 +50,12 @@
     background-color: #8bbabd;
   }
 }
+
+.auth-alreadylog {
+  @include flex-center-column;
+  width: 100%;
+  .authAlert-button {
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+}

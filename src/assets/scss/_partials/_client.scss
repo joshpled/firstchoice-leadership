@@ -10,42 +10,6 @@
   width: 80vw;
 }
 
-.client-profile {
-  color: $text-white;
-  position: absolute;
-  left: 0;
-  width: 20%;
-  height: 100%;
-}
-
-.client-picture {
-  @include flex-center-column;
-  width: 100%;
-  height: 200px;
-  padding: 20px;
-  img {
-    height: 100%;
-  }
-}
-.client-details,
-.client-settings {
-  @include flex-center-column;
-}
-.client-settings {
-  position: absolute;
-  bottom: 0;
-  margin: 20px 0px;
-  button {
-    margin: 10px 0;
-  }
-  .btn {
-    background-color: rgba($color: #20515a, $alpha: 0.5);
-    border: none;
-  }
-  .btn:hover {
-    background-color: rgba($color: #2f7683, $alpha: 0.5);
-  }
-}
 .client-tabs {
   color: $text-white;
   position: absolute;

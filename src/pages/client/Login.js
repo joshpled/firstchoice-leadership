@@ -1,35 +1,53 @@
 import React, { useState } from "react";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useHistory } from "react-router-dom";
-import { auth } from "../../firebase";
-import { Button, Form, FloatingLabel, Alert, Spinner } from "react-bootstrap";
+import { useAuth } from "../../context/AuthContext";
+import { Button, Form, FloatingLabel, Alert } from "react-bootstrap";
 
 export default function Login() {
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // eslint-disable-next-line no-unused-vars
-  const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth, email, password);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const { login } = useAuth();
+  const { currentUser } = useAuth();
 
-  const handleSubmit = (e) => {
+  async function handleSubmit(e) {
     e.preventDefault();
-    signInWithEmailAndPassword(email, password);
-    if (user !== undefined) history.push("/client-home");
-  };
+
+    try {
+      setError("");
+      setLoading(true);
+      await login(email, password);
+      history.push("/client-home");
+    } catch (err) {
+      setError(err.message);
+    }
+
+    setLoading(false);
+  }
 
   return (
     <div className="auth-container">
       <div className="auth-box">
-        <h1>Login</h1>
-        {loading ? (
-          <Spinner animation="border" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </Spinner>
-        ) : (
+        <h1>Log In</h1>
+        {currentUser && (
+          <Alert variant="warning">
+            <div className="auth-alreadylog">
+              <div className="authAlert-heading">You're logged in as {currentUser.email} </div>
+              <div className="authAlert-button">
+                <Link to="/client-home">
+                  <Button>Go To Client Home</Button>
+                </Link>
+              </div>
+            </div>
+          </Alert>
+        )}
+        {error && <Alert variant="danger">{error}</Alert>}
+        {!!currentUser || (
           <>
-            {error && <Alert variant="danger">{error.message}</Alert>}
             <div className="auth-form">
-              <Form onSubmit={(e) => handleSubmit(e)}>
+              <Form onSubmit={handleSubmit}>
                 <FloatingLabel controlId="floatingInput" label="Email address" className="mb-3">
                   <Form.Control
                     type="email"
@@ -50,9 +68,12 @@ export default function Login() {
                     required
                   />
                 </FloatingLabel>
-                <Button type="submit">Submit</Button>
+                <Button disabled={loading} type="submit">
+                  Submit
+                </Button>
               </Form>
             </div>
+
             <div className="authlinks-container">
               <Link to="/forgot-password"> Forgot Password </Link>
               <Link to="/signup"> Need an Account? </Link>
