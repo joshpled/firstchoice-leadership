@@ -11,6 +11,7 @@ import { Navigation, Footer } from "components";
 //styling
 import "./context/icons";
 import { ClientHome, UpdateProfile } from "pages";
+import SidebarMenu from "components/SidebarMenu";
 
 export default function App() {
   const location = useLocation();
@@ -31,6 +32,7 @@ export default function App() {
   return (
     <div className="main-container">
       <Navigation />
+      <SidebarMenu pageWrapId={"page-wrap"} outerContainerId={"outer-container"} />
       <AuthProvider>
         <Switch>
           <PrivateRoute exact path="/client-home" component={ClientHome} />

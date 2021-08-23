@@ -14,32 +14,46 @@
   font-weight: 300;
   display: flex;
   justify-content: center;
+  width: 100%;
 
   form {
-    width: 200px;
+    width: 80%;
     display: flex;
     flex-direction: column;
+    input {
+      height: 2.5em;
+    }
     label {
       text-align: left;
       margin: 10px 0;
     }
     textarea {
       margin-bottom: 10px;
+      height: 6.5em;
     }
+  }
+  @include for-tablet-landscape-down {
+    margin-top: 20px;
   }
 }
 
 .contact-content-wrapper {
   @include flex-center-column;
   flex-direction: row;
-  @include for-phone-only {
+  width: 50%;
+  @include for-tablet-landscape-down {
     flex-direction: column;
+    width: 80%;
   }
 }
 
 .contact-info {
-  margin-right: 20px;
+  width: 400px;
   color: rgb(207, 207, 207);
+  @include for-tablet-landscape-down {
+    flex-direction: column;
+    width: 80%;
+  }
 }
 
 .contact-emailphone {

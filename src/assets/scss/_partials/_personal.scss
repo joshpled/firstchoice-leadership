@@ -13,7 +13,4 @@
   @include flex-center-column;
   flex-direction: row;
   align-items: unset;
-  @include for-phone-only {
-    flex-direction: column;
-  }
 }

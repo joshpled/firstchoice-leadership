@@ -29,13 +29,6 @@
   }
 
   @include for-tablet-landscape-down {
-    flex-direction: column;
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 400px;
-    background-color: $contrast-gray;
-    height: 100vh;
-    z-index: 9999;
+    display: none;
   }
 }

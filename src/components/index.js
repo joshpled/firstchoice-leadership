@@ -6,5 +6,6 @@ import ContactInfo from "./ContactInfo";
 import BlogPost from "./BlogPost";
 import ClientProfile from "./ClientComponents/ClientProfile";
 import Loading from "./Loading";
+import ClientTabs from "./ClientComponents/ClientTabs";
 
-export { Navigation, InfoCard, Footer, ContactForm, ContactInfo, BlogPost, ClientProfile, Loading };
+export { Navigation, InfoCard, Footer, ContactForm, ContactInfo, BlogPost, ClientProfile, Loading, ClientTabs };

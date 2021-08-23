@@ -1,7 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../firebase";
 
 function Navigation() {
+  const [user, loading, error] = useAuthState(auth);
+
   return (
     <div className="navigation-container">
       <Link to="/">
@@ -27,10 +31,10 @@ function Navigation() {
       <Link to="/blog">
         <p className="link">BLOG</p>
       </Link>
-      {false ? (
+      {user ? (
         <>
           <span className="separator">|</span>
-          <Link to="/client/home">
+          <Link to="/client-home">
             <p className="link">CLIENT HOME</p>
           </Link>
         </>

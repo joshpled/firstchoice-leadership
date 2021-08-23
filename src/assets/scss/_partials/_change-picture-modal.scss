@@ -1,0 +1,21 @@
+.change-picture-modal {
+  @include flex-center-column;
+  display: flex !important;
+  .modal-content {
+    width: fit-content;
+  }
+}
+
+.change-picture-body {
+  @include flex-center-column;
+  flex-direction: row;
+  width: fit-content;
+  form {
+    width: 300px;
+    margin-right: 20px;
+  }
+  img {
+    height: 200px;
+    width: auto;
+  }
+}

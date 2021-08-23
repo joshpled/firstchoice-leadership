@@ -3,7 +3,7 @@ import { Spinner, Alert } from "react-bootstrap";
 
 import { auth } from "../../firebase";
 
-import { ClientProfile } from "components";
+import { ClientProfile, ClientTabs } from "components";
 
 export default function ClientHome() {
   const [user, loading, error] = useAuthState(auth);
@@ -14,7 +14,9 @@ export default function ClientHome() {
       <div className="client-home-container">
         <ClientProfile />
         <div className="client-divider"></div>
-        <div className="client-tabs">Hello</div>
+        <div className="client-tabs">
+          <ClientTabs />
+        </div>
       </div>
     </div>
   );
