@@ -35,6 +35,7 @@
     margin: 0;
     padding: 0;
   }
+
   li {
     @include flex-center-column;
     flex-direction: row;
@@ -43,6 +44,7 @@
     border: 1px solid white;
     cursor: pointer;
   }
+
   input {
     margin: 5px;
   }
@@ -58,13 +60,7 @@
     text-overflow: ellipsis;
     width: 100%;
     overflow: hidden;
-  }
-  .closed-message {
     white-space: nowrap;
-  }
-
-  .open-message {
-    height: fit-content;
   }
 
   .message-date {

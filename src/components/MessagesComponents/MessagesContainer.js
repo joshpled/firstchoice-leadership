@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import MessagesNav from "./MessagesNav";
 import Message from "./Message";
+import generateKey from "context/generateKey";
 
 const data = [
   {
@@ -33,9 +34,10 @@ export default function MessagesContainer() {
   }, [currentNav]);
 
   const showMessages = () => {
-    return filteredMessages.map(({ id, title, content, read, date }) => <Message id={id} title={title} content={content} read={read} date={date} />);
+    return filteredMessages.map(({ id, title, content, read, date }) => {
+      return <Message {...{ id, title, content, read, date }} key={generateKey(id)} />;
+    });
   };
-
   return (
     <div className="messages-container">
       <div className="messages-menu">

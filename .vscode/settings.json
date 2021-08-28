@@ -6,4 +6,6 @@
         "firestore"
     ], 
     "cSpell.diagnosticLevel": "Hint",
+    "liveSassCompile.settings.watchOnLaunch": true,
+    "liveSassCompile.settings.showOutputWindowOn": "Error",
 }
