@@ -7,11 +7,10 @@ import routes from "routes";
 import generateKey from "context/generateKey";
 import PrivateRoute from "components/PrivateRoute";
 //compnents
-import { Navigation, Footer } from "components";
+import { Navigation, Footer, SidebarMenu } from "components";
 //styling
 import "./context/icons";
 import { ClientHome, UpdateProfile } from "pages";
-import SidebarMenu from "components/SidebarMenu";
 
 export default function App() {
   const location = useLocation();

@@ -7,5 +7,25 @@ import BlogPost from "./BlogPost";
 import ClientProfile from "./ClientComponents/ClientProfile";
 import Loading from "./Loading";
 import ClientTabs from "./ClientComponents/ClientTabs";
+import ChangePictureModal from "./ClientComponents/ChangePictureModal";
+import UpdateProfileModal from "./ClientComponents/UpdateProfileModal";
+import SidebarMenu from "./SidebarMenu";
+import PrivateRoute from "./PrivateRoute";
+import MessagesContainer from "./MessagesComponents/MessagesContainer";
 
-export { Navigation, InfoCard, Footer, ContactForm, ContactInfo, BlogPost, ClientProfile, Loading, ClientTabs };
+export {
+  SidebarMenu,
+  Navigation,
+  InfoCard,
+  Footer,
+  ContactForm,
+  ContactInfo,
+  BlogPost,
+  ClientProfile,
+  Loading,
+  ClientTabs,
+  ChangePictureModal,
+  UpdateProfileModal,
+  PrivateRoute,
+  MessagesContainer,
+};

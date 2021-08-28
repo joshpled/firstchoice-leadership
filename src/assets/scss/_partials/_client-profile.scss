@@ -4,6 +4,9 @@
   left: 0;
   width: 20%;
   height: 100%;
+  @include for-phone-only {
+    display: none;
+  }
 }
 
 .client-picture {
