@@ -1,0 +1,54 @@
+.messages-container {
+  .nav.nav-pills {
+    background-color: #cecece;
+  }
+
+  .nav-link.active {
+    background-color: gray;
+    border-radius: 0;
+    color: white;
+  }
+
+  .nav-link {
+    color: black;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    background-color: #96909060;
+    border-bottom: rgba(182, 182, 182, 0.664) 1px solid;
+    color: white;
+    display: flex;
+    align-items: center;
+    div {
+      padding: 10px;
+    }
+  }
+  .message-wrapper {
+    display: flex;
+    width: 100%;
+    .message-title {
+      width: 200px;
+      @include text-overflow;
+    }
+    .message-content {
+      width: 100%;
+      @include text-overflow;
+    }
+  }
+  .message-checkbox {
+    padding: 0 20px;
+  }
+}
+
+.messages-title-bar {
+  .message-title,
+  .message-content {
+    text-align: center;
+    border-left: rgba(182, 182, 182, 0.664) 1px solid;
+    border-right: rgba(182, 182, 182, 0.664) 1px solid;
+  }
+}

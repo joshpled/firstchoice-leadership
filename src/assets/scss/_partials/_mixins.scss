@@ -5,6 +5,12 @@
   align-items: center;
 }
 
+@mixin text-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 //media queries mixins
 
 @mixin for-phone-only {

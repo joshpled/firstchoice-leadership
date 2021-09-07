@@ -3,7 +3,7 @@ import { Button, Modal, Image, Form, Alert } from "react-bootstrap";
 import { useAuth } from "../../context/AuthContext";
 
 export default function UpdateProfileModal({ show, handleClose, image }) {
-  const { currentUser, updatePassword, updateEmail } = useAuth();
+  const { currentUser, updatePasswordFunc, updateEmailFunc } = useAuth();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -23,10 +23,10 @@ export default function UpdateProfileModal({ show, handleClose, image }) {
     setError("");
 
     if (email !== currentUser.email) {
-      promises.push(updateEmail(email));
+      promises.push(updateEmailFunc(email));
     }
     if (password) {
-      promises.push(updatePassword(password));
+      promises.push(updatePasswordFunc(password));
     }
 
     Promise.all(promises)

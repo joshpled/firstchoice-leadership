@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { auth, storage } from "../../firebase";
+import { app, auth, storage } from "../../firebase";
+import { signOut } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Spinner, Button, Image, Modal } from "react-bootstrap";
-import firebase from "firebase/app";
 import ChangePictureModal from "./ChangePictureModal";
 import UpdateProfileModal from "./UpdateProfileModal";
 
@@ -21,12 +21,9 @@ export default function ClientProfile() {
   };
 
   const logout = () => {
-    firebase
-      .auth()
-      .signOut()
-      .then(() => {
-        history.push("/");
-      });
+    signOut(auth).then(() => {
+      history.push("/");
+    });
   };
 
   return (

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 import { Route, Switch, useLocation } from "react-router-dom";
 //third-party
 //local
@@ -39,7 +40,6 @@ export default function App() {
           {navRoutes}
         </Switch>
       </AuthProvider>
-
       <Footer />
     </div>
   );

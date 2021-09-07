@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button, Modal, Image, Form, Alert } from "react-bootstrap";
-import { auth, storage } from "../../firebase";
-import firebase from "firebase/app";
+import { app, auth, storage } from "../../firebase";
+import { ref } from "firebase/storage";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 export default function ChangePictureModal({ show, handleClose, image }) {
@@ -16,9 +16,8 @@ export default function ChangePictureModal({ show, handleClose, image }) {
   const handleImageUpload = (e) => {
     e.preventDefault();
     setPhotoLoading(true);
-    const ref = storage.ref(`/images/${file.name}`);
-    const uploadTask = ref.put(file);
-    uploadTask.on("state_changed", console.log("Success"), console.error("Error"), () => {
+    const ref = ref(storage, `/images/${file.name}`).put(file);
+    ref.on("state_changed", console.log("Success"), console.error("Error"), () => {
       ref.getDownloadURL().then((url) => {
         setPhotoUrl(url);
         user

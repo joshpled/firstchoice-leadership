@@ -12,6 +12,7 @@ import UpdateProfileModal from "./ClientComponents/UpdateProfileModal";
 import SidebarMenu from "./SidebarMenu";
 import PrivateRoute from "./PrivateRoute";
 import MessagesContainer from "./MessagesComponents/MessagesContainer";
+import ChatContainer from "./ChatComponents/ChatContainer";
 
 export {
   SidebarMenu,
@@ -28,4 +29,5 @@ export {
   UpdateProfileModal,
   PrivateRoute,
   MessagesContainer,
+  ChatContainer,
 };
