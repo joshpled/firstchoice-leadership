@@ -1,4 +1,5 @@
-import { ClientHome, Home, Login, Signup, UpdateProfile, ForgotPassword, Professional, Personal, Contact, About, NotFound, Blog } from "pages";
+import { ClientHome, Home, Login, Signup, UpdateProfile, ForgotPassword, Professional, Personal, Contact, About, NotFound, Blog, AdminHome } from "pages";
+
 var routes = [
   {
     path: "/",
@@ -30,12 +31,12 @@ var routes = [
     auth: false,
     component: About,
   },
-  {
-    path: "/blog",
-    name: "Blog",
-    auth: false,
-    component: Blog,
-  },
+  // {
+  //   path: "/blog",
+  //   name: "Blog",
+  //   auth: false,
+  //   component: Blog,
+  // },
   {
     path: "/login",
     name: "Login",
@@ -47,6 +48,12 @@ var routes = [
     name: "Sign Up",
     auth: false,
     component: Signup,
+  },
+  {
+    path: "/admin",
+    name: "Admin Home",
+    auth: false,
+    component: AdminHome,
   },
   {
     path: "/forgot-password",

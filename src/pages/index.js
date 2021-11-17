@@ -11,5 +11,6 @@ import UpdateProfile from "./client/UpdateProfile";
 import ClientHome from "./client/ClientHome";
 import NotFound from "./NotFound";
 import Blog from "./Blog";
+import AdminHome from "./admin/AdminHome";
 
-export { ClientHome, Home, Personal, Professional, Contact, About, Login, Signup, ForgotPassword, UpdateProfile, NotFound, Blog };
+export { ClientHome, Home, Personal, Professional, Contact, About, Login, Signup, ForgotPassword, UpdateProfile, NotFound, Blog, AdminHome };

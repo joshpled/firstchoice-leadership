@@ -27,11 +27,11 @@ function Navigation() {
       <Link to="/about">
         <p className="link">ABOUT</p>
       </Link>
-      <span className="separator">|</span>
-      <Link to="/blog">
+      {/* <span className="separator">|</span> */}
+      {/* <Link to="/blog">
         <p className="link">BLOG</p>
-      </Link>
-      {user ? (
+      </Link> */}
+      {/* {user ? (
         <>
           <span className="separator">|</span>
           <Link to="/client-home">
@@ -40,7 +40,7 @@ function Navigation() {
         </>
       ) : (
         ""
-      )}
+      )} */}
     </div>
   );
 }

@@ -4,12 +4,15 @@ import React from "react";
 function About() {
   return (
     <div className="about-wrapper">
-      <div className="about-header display-4">ABOUT | QUALIFICATIONS</div>
+      <div className="about-header">ABOUT</div>
       <div className="about-intro">
         I am excited to see you here exploring who are we and what we do. <br></br>I am a Certified Lifeforming Coach, Trainer, and Keynote/Transformational
         Speaker.
       </div>
-      <div className="about-body">
+      <div className="about-photo">
+        <img src="https://i.picsum.photos/id/879/200/200.jpg?hmac=_4fWz44KoPcfzc5VRuEhms_-fXjdx1VsijYO3xVD9b0" alt="random" />
+      </div>
+      {/* <div className="about-body">
         <div className="about-body-one">
           “Empowering Leaders for Every Situation."<br></br>First Choice Leadership was created after being frustrated with “leaders” who did not know how to
           deal with stressful situations when they presented. First Choice is the instrument you can use to challenge yourself and to take you to the next level
@@ -24,26 +27,30 @@ function About() {
           Working together, I will move you and/or your team or organization in the desired direction to reach your goals. Contact Me. I am looking forward to
           assisting you on your journey to becoming a successful leader. Together we can unlock the leader in you for every situation.
         </div>
-      </div>
+      </div> */}
       <div style={{ textAlign: "center" }} className="about-maxwell">
-        <a href="http://www.johncmaxwellgroup.com/jesusperez">http://www.johncmaxwellgroup.com/jesusperez</a>
+        <a href="http://www.johncmaxwellgroup.com/jesusperez">johncmaxwellgroup.com/jesusperez</a>
       </div>
       <div className="about-footer">
         <div>
-          <FontAwesomeIcon icon="envelope-open" />
-          <a href="mailto:jesusmperez@ileadperez.com">jesusmperez@ileadperez.com</a>
+          <a href="mailto:jesusmperez@ileadperez.com">
+            <FontAwesomeIcon icon="envelope-open" />
+          </a>
         </div>
         <div>
-          <FontAwesomeIcon icon={["fab", "linkedin"]} />
-          <a href="http://www.linkedin.com/in/jesus-perez-b5033030/">linkedin.com/in/jesus-perez-b5033030/</a>
+          <a href="http://www.linkedin.com/in/jesus-perez-b5033030/">
+            <FontAwesomeIcon icon={["fab", "linkedin"]} />
+          </a>
         </div>
         <div>
-          <FontAwesomeIcon icon={["fab", "twitter"]} />
-          <a href="http://twitter.com/jesuper">twitter.com/jesuper</a>
+          <a href="http://twitter.com/jesuper">
+            <FontAwesomeIcon icon={["fab", "twitter"]} />
+          </a>
         </div>
         <div>
-          <FontAwesomeIcon icon={["fab", "facebook"]} />
-          <a href="http://facebook.com/profile.php?id=100008540052301">facebook.com/profile.php?id=100008540052301</a>
+          <a href="http://facebook.com/profile.php?id=100008540052301">
+            <FontAwesomeIcon icon={["fab", "facebook"]} />
+          </a>
         </div>
       </div>
     </div>

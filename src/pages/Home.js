@@ -35,13 +35,13 @@ export default function Home() {
           </Spinner>
         )}
 
-        <div>
+        {/* <div>
           <Link to={user ? "/client-home" : "/login"}>
             <Button variant="secondary" value="professional">
               {user ? "Client Home" : "Client Login"}
             </Button>
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );

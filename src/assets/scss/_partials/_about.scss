@@ -1,51 +1,40 @@
 .about-wrapper {
-  display: flex;
-  flex-direction: column;
-  padding: 80px;
-  color: rgb(167, 167, 167);
-  font-weight: 300;
+  @include flex-center-column;
   .about-header {
-    text-align: center;
+    font-weight: 300;
+    font-size: 3em;
+    color: $text-white;
   }
   .about-intro {
-    margin: 20px;
-    text-align: center;
-  }
-  .about-body {
-    display: flex;
-    flex-direction: row;
-    div {
-      margin: 10px;
-    }
-    .about-body-two {
+    color: $text-white;
+    @include for-phone-only {
+      padding: 20px;
       text-align: center;
     }
-    .about-body-three {
-      text-align: end;
+  }
+  .about-photo {
+    margin: 10px;
+  }
+  .about-maxwell {
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: 300;
+      font-size: 1.2em;
     }
   }
   .about-footer {
-    display: flex;
+    @include flex-center-column;
     flex-direction: row;
-    margin: 10px;
-    place-content: center center;
-    svg {
-      margin-right: 10px;
-    }
     div {
       margin: 10px;
-    }
-    a {
-      text-decoration: none;
-      color: rgb(213, 213, 213);
-    }
-  }
-  .about-maxwell {
-    text-align: center;
-    font-size: larger;
-    a {
-      text-decoration: none;
-      color: rgb(213, 213, 213);
+      a {
+        color: $text-white;
+      }
+      .svg-inline--fa {
+        height: 32px;
+        width: auto;
+      }
     }
   }
 }
