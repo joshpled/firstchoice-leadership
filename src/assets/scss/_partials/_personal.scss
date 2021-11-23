@@ -8,9 +8,22 @@
   font-weight: 300;
   font-size: 4rem;
   margin: 10px;
+  @include for-phone-only {
+    text-align: center;
+    position: absolute;
+    top: 10px;
+  }
 }
 .personal-cards {
   @include flex-center-column;
   flex-direction: row;
   align-items: unset;
+  @include for-phone-only {
+    flex-direction: column;
+    position: relative;
+    top: 200px;
+    .custom-card {
+      max-width: 90vw;
+    }
+  }
 }

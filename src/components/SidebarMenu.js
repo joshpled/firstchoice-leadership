@@ -27,7 +27,7 @@ export default function SidebarMenu(props) {
       <Link className="menu-item" to="/blog">
         Blog
       </Link>
-      {user ? <Link to="/client-home">CLIENT HOME</Link> : ""}
+      {/* {user ? <Link to="/client-home">CLIENT HOME</Link> : ""} */}
     </Menu>
   );
 }

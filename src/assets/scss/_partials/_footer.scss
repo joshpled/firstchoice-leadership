@@ -13,7 +13,7 @@
   .footer-right {
     float: right;
   }
-  @media only screen and (max-width: 700px) {
-    font-size: 0.9em;
+  @include for-phone-only {
+    display: none;
   }
 }
