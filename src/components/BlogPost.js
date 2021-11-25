@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function BlogPost() {
+export default function BlogPost({ title, content, timestamp, comments, likes }) {
   return (
     <div>
       <div>Blog Title</div>
