@@ -1,0 +1,19 @@
+.new-blog-container {
+  @include flex-center-column;
+  .new-blog {
+    @include flex-center-column;
+    background-color: rgba(0, 0, 0, 0.452);
+    width: 50%;
+    padding: 10px;
+    @include for-phone-only {
+      width: 90%;
+    }
+    @include for-tablet-landscape-down {
+      width: 90%;
+    }
+    color: $text-white;
+    form {
+      width: 100%;
+    }
+  }
+}

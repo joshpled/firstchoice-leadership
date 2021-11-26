@@ -12,6 +12,10 @@
   }
   .footer-right {
     float: right;
+    a {
+      text-decoration: none;
+      color: white;
+    }
   }
   @include for-phone-only {
     display: none;

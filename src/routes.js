@@ -14,6 +14,7 @@ import {
   AdminHome,
   AdminLogin,
 } from "pages";
+import { NewBlog } from "components";
 
 var routes = [
   {
@@ -55,7 +56,7 @@ var routes = [
   {
     path: "/admin-home",
     name: "Admin Home",
-    auth: false,
+    auth: true,
     component: AdminHome,
   },
   {
@@ -63,6 +64,12 @@ var routes = [
     name: "Admin Login",
     auth: false,
     component: AdminLogin,
+  },
+  {
+    path: "/new-blog",
+    name: "New Blog",
+    auth: false,
+    component: NewBlog,
   },
   // {
   //   path: "/login",

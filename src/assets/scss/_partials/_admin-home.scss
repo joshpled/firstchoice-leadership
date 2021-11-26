@@ -1,0 +1,17 @@
+.admin-home {
+  @include flex-center-column;
+}
+.admin-container {
+  @include flex-center-column;
+  width: 20em;
+  height: 20em;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  color: #d6d6d6;
+  .admin-buttons {
+    @include flex-center-column;
+    button {
+      margin-bottom: 10px;
+    }
+    padding-top: 20px;
+  }
+}

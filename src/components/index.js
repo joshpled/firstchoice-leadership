@@ -1,3 +1,4 @@
+import Blogs from "./Blogs";
 import Navigation from "./Navigation";
 import InfoCard from "./InfoCard";
 import Footer from "./Footer";
@@ -13,6 +14,7 @@ import SidebarMenu from "./SidebarMenu";
 import PrivateRoute from "./PrivateRoute";
 import MessagesContainer from "./MessagesComponents/MessagesContainer";
 import ChatContainer from "./ChatComponents/ChatContainer";
+import NewBlog from "./NewBlog";
 
 export {
   SidebarMenu,
@@ -30,4 +32,6 @@ export {
   PrivateRoute,
   MessagesContainer,
   ChatContainer,
+  Blogs,
+  NewBlog,
 };

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Form, Button, Alert } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
@@ -10,6 +10,12 @@ function AdminLogin() {
   const [loading, setLoading] = useState("");
   const { currentUser } = useAuth();
   const { login } = useAuth();
+
+  useEffect(() => {
+    if (!loading && currentUser) {
+      history.push("/admin-login");
+    }
+  }, []);
 
   async function handleSubmit(e) {
     e.preventDefault();
