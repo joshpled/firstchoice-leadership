@@ -14,7 +14,7 @@ function ContactInfo() {
         </div>
         <div>
           <FontAwesomeIcon icon="envelope-open" style={styles.margin} />
-          jesusmperez@ileadperez.com
+          evangelistjmperez@gmail.com
         </div>
       </div>
       <div>
