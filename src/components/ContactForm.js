@@ -6,7 +6,7 @@ export default function ContactForm() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const onSubmit = async () => {
-    window.open(`mailto:joshuapleduc@gmail.com?subject=${fullName}+:+${email}&body=${message}`);
+    window.open(`mailto:jesusmperez@ileadperez.com?subject=${fullName}+:+${email}&body=${message}`);
   };
 
   return (
